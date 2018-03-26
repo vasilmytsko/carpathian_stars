@@ -1,0 +1,523 @@
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+.wrap__top {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  //height: 85px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .55);
+  z-index: 9999;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  //height: 85px;
+}
+
+.header__title {
+  position: absolute;
+  width: 350px;
+  top: 130px;
+  left: 0;
+  z-index: 1;
+  h1 {
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 2.4rem;
+    color: $text-color;
+    line-height: 1.4;
+    letter-spacing: .6px;
+    margin-top: 25px;
+  }
+}
+
+.menu [type="checkbox"],
+.menu label.toggle__submenu {
+  display: none;
+}
+
+.menu label.toggle__menu {
+  display: none;
+  padding: 28px 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu label.toggle__menu .fa {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  font-size: 2.4rem;
+}
+
+.toggle__menu {
+  display: none;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu__item {
+  padding-left: 30px;
+}
+
+.menu__link {
+  display: block;
+  color: $text-color2;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  padding: 35px 0 25px;
+  &:hover {
+    color: $text-color;
+  }
+  &:active {
+    color: $text-color;
+  }
+  &:focus {
+    color: $text-color;
+  }
+}
+
+.active {
+  color: $text-color;
+}
+
+.panel {
+  position: absolute;
+  left: -90px;
+  display: none;
+  width: 816px;
+  background-color: rgba(255, 255, 255, .55);;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu__item:hover > .panel {
+  display: block;
+  margin: 0;
+}
+
+.menu li > ul li a {
+  display: block;
+  padding: 14px 10px;
+  padding-left: 26px;
+  color: $text-color2;
+  font-size: 1.8rem;
+  letter-spacing: 1.05px;
+  line-height: 18px;
+  &:hover {
+    color: $text-color;
+  }
+}
+
+.menu a.active {
+  color: $text-color;
+}
+
+.panel ul {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.panel li {
+  margin-right: 1em;
+}
+
+.panel li:hover > a {
+  color: #416b83;
+}
+
+.panel ul ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.has-children span {
+  display: block;
+  font-size: 2.2rem;
+  margin-top: 10px;
+  padding: 20px;
+  color: $text-color2;
+}
+
+.panel .has-children > a {
+  margin-bottom: 1em;
+  display: block;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+
+.list__children-2 {
+  padding: 75px 15px 107px;
+  border-left: 1px solid $bg-color3;
+  border-right: 1px solid $bg-color3;
+}
+
+.header__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-color: rgba(27, 94, 32, .64);
+}
+
+.book__room {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0 60px 0;
+}
+
+.form {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  input, select {
+    background-color: $bg-color2;
+    width: 100%;
+    height: 47px;
+    border: none;
+    color: $text-color3;
+    font-size: 1.4rem;
+    padding: 16px;
+  }
+}
+
+.ui-datepicker {
+  font-size: 12pt !important
+}
+
+.my-data {
+  position: relative;
+}
+
+.bout img, .departure img {
+  width: 21px;
+  height: 22px;
+  position: absolute;
+  bottom: 28%;
+  right: 12%;
+}
+
+.form select {
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.form svg {
+  position: absolute;
+  bottom: 40%;
+  right: 12%;
+  width: 18px;
+  height: 9px;
+}
+
+.submit {
+  background-color: $bg-color3;
+  color: $text-color;
+  &:hover {
+    border: 1px solid $bg-color2;
+  }
+}
+
+.sl .sl__slider {
+  text-align: center;
+  color: $text-color;
+}
+
+.sl .sl__img {
+  width: 100%;
+}
+
+.sl .slick-dots {
+  z-index: 1;
+}
+
+.sl .slick-dots li {
+  margin: 0;
+}
+
+.sl .slick-dots li button:before {
+  color: $text-color;
+}
+
+.sliders {
+  height: 788px;
+  overflow: hidden;
+}
+
+@media all and (max-width: 767px) {
+  .header {
+    background: #8db7db;
+  }
+  .menu {
+    overflow: hidden;
+    width: 100%;
+  }
+  .menu ul {
+    display: block;
+    transition: max-height 0.3s;
+  }
+  .menu__link {
+    font-size: 2rem;
+    line-height: 15px;
+    letter-spacing: 0.64px;
+    padding: 15px 0 15px;
+  }
+  .has-children span {
+    font-size: 1.8rem;
+    margin-top: 0;
+    padding: 10px;
+  }
+  .menu li > ul li a {
+    padding: 8px 5px;
+    padding-left: 26px;
+    font-size: 1.6rem;
+    line-height: 16px;
+  }
+  .panel {
+    left: 0;
+    background-color: transparent;
+  }
+  .list__children-2 {
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .menu .menu__list {
+    max-height: 0;
+  }
+  .menu li > ul li ul {
+    position: absolute;
+    right: auto;
+    top: auto;
+  }
+  .menu label.toggle__menu {
+    display: block;
+  }
+  .menu__item:hover > .panel {
+    display: none;
+  }
+  input.toggle__menu:checked ~ ul,
+  input.toggle__submenu:checked ~ .panel {
+    display: block;
+    position: relative;
+    max-height: 5000px;
+    transition: max-height 2s ease-in;
+    z-index: 9999;
+  }
+  .menu label.toggle__submenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+  }
+  input.toggleMenu:checked + label.toggle__menu {
+    color: $text-color;
+  }
+  input.toggle__submenu:hover ~ a {
+    color: $text-color;
+  }
+  input.toggle__submenu:checked ~ a {
+    color: $text-color;
+  }
+  .menu label.toggle__submenu .fa:before {
+    content: "\f0d7";
+    color: $text-color2;
+    padding: 0;
+  }
+  .menu label.toggle__submenu .fa {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 20px;
+  }
+  .menu input.toggle__submenu:checked ~ label.toggle__submenu .fa::before {
+    content: "\f0d8";
+    color: $text-color;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .header__title {
+    top: 85px;
+    width: 100%;
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 25px;
+      width: auto;
+    }
+    p {
+      display: none;
+    }
+  }
+  .header__bottom {
+    background-color: transparent;
+    height: 50%;
+    top: 33%;
+  }
+  .book__room {
+    height: 100%;
+  }
+  .form__title h3 {
+    text-align: center;
+  }
+  form input, form select {
+    margin-bottom: 20px;
+  }
+  .bout img, .departure img {
+    bottom: 50%;
+  }
+  .form svg {
+    bottom: 58%;
+  }
+  .submit {
+    border: 1px solid $bg-color2;
+  }
+  .sliders {
+    background-color: $bg-color3;
+  }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .header__title {
+    top: 150px;
+    width: 100%;
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      line-height: 25px;
+      width: auto;
+    }
+    p {
+      display: none;
+    }
+  }
+  .header__bottom {
+    background-color: transparent;
+    height: 50%;
+    top: 45%;
+  }
+  .book__room {
+    height: 100%;
+  }
+  .form__title h3 {
+    text-align: center;
+  }
+  form input, form select {
+    margin-bottom: 20px;
+  }
+  .bout img, .departure img {
+    bottom: 50%;
+  }
+  .form svg {
+    bottom: 58%;
+  }
+  .submit {
+    border: 1px solid $bg-color2;
+  }
+  .sliders {
+    background-color: $bg-color3;
+    height: 970px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .header__title{
+    left: 50px;
+  }
+  .menu__item {
+    padding-left: 15px;
+    a {
+      font-size: 2rem;
+    }
+  }
+  .header__bottom{
+    height: auto;
+  }
+  .has-children span{
+    font-size: 1.8rem;
+  }
+  .menu li > ul li a{
+    font-size: 1.6rem;
+    padding: 10px 10px;
+  }
+  .panel{
+    left: -220px;
+    width: 730px;
+  }
+  form input, form select{
+    margin-bottom: 20px;
+  }
+  .bout img, .departure img {
+    bottom: 50%;
+  }
+  .form svg {
+    bottom: 58%;
+  }
+  .book__room {
+    height: 100%;
+  }
+  .sliders{
+    height: 880px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .header__title{
+    left: 50px;
+  }
+  .header__bottom{
+    height: auto;
+  }
+  form input, form select{
+    margin-bottom: 20px;
+  }
+  .bout img, .departure img {
+    bottom: 50%;
+  }
+  .form svg {
+    bottom: 58%;
+  }
+  .book__room {
+    height: 100%;
+  }
+  .sliders{
+    height: 900px;
+  }
+}

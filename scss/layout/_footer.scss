@@ -1,0 +1,136 @@
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+.footer {
+  position: relative;
+  height: 435px;
+  background: $bg-color2 url("../img/tree2.png") no-repeat 0% 100%;
+  background-size: contain;
+  margin-top: -435px;
+}
+
+.footer__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 0 110px;
+}
+
+.contact {
+  background-color: $bg-color2;
+  color: $text-color2;
+  font-size: 1.8rem;
+  padding: 25px 50px;
+}
+
+.phone {
+  padding: 30px 0;
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 50px;
+  height: 225px;
+  a {
+    display: block;
+    color: $text-color5;
+    font-size: 1.8rem;
+    line-height: 25px;
+    margin-bottom: 15px;
+    &:hover {
+      color: $text-color3;
+    }
+  }
+}
+
+.begin {
+  a {
+    display: block;
+    width: 357px;
+    height: 86px;
+    position: relative;
+    border: 2px solid $bg-color3;
+    background-color: transparent;
+    color: $text-color5;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    line-height: 86px;
+    letter-spacing: 1px;
+    text-align: center;
+    overflow: hidden;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  a span:nth-child(1) {
+    transform: translateX(-100%);
+  }
+  a:hover span:nth-child(1) {
+    transform: translateX(0);
+    @include transition(.5s);
+  }
+  a span:nth-child(2) {
+    transform: translateX(0);
+  }
+  a:hover span:nth-child(2) {
+    transform: translateX(100%);
+    @include transition(.5s);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .footer {
+    background: none;
+  }
+  .contact{
+    text-align: center;
+  }
+  .begin a {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer {
+    background: none;
+  }
+  .contact{
+    text-align: center;
+  }
+  .footer__menu{
+    justify-content: space-around;
+  }
+  .begin a {
+   margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .footer {
+    background: none;
+  }
+  .contact{
+    text-align: center;
+  }
+  .footer__menu{
+    justify-content: space-around;
+    padding: 25px 0;
+  }
+  .begin {
+    margin-top: 50px;
+    a {
+      margin: 0 auto;
+    }
+  }
+}
+
