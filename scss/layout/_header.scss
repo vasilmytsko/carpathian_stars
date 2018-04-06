@@ -25,6 +25,10 @@
   //height: 85px;
 }
 
+.content__box {
+  position: relative;
+}
+
 .header__title {
   position: absolute;
   width: 350px;
@@ -245,6 +249,7 @@ form {
 .submit {
   background-color: $bg-color3;
   color: $text-color;
+  border: 1px solid $bg-color3;
   &:hover {
     border: 1px solid $bg-color2;
   }
@@ -261,14 +266,25 @@ form {
 
 .sl .slick-dots {
   z-index: 1;
+  bottom: 50%;
+  width: 28%;
+}
+
+.sl .slick-dots li button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, .2);
+  @include transition(.3s);
+}
+
+.sl .slick-dots li button:hover:before,
+.sl .slick-dots li.slick-active button:before {
+  background: $bg-color3;
 }
 
 .sl .slick-dots li {
   margin: 0;
-}
-
-.sl .slick-dots li button:before {
-  color: $text-color;
 }
 
 .sliders {
@@ -458,7 +474,7 @@ form {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .header__title{
+  .header__title {
     left: 50px;
   }
   .menu__item {
@@ -467,21 +483,21 @@ form {
       font-size: 2rem;
     }
   }
-  .header__bottom{
+  .header__bottom {
     height: auto;
   }
-  .has-children span{
+  .has-children span {
     font-size: 1.8rem;
   }
-  .menu li > ul li a{
+  .menu li > ul li a {
     font-size: 1.6rem;
     padding: 10px 10px;
   }
-  .panel{
+  .panel {
     left: -220px;
     width: 730px;
   }
-  form input, form select{
+  form input, form select {
     margin-bottom: 20px;
   }
   .bout img, .departure img {
@@ -493,19 +509,19 @@ form {
   .book__room {
     height: 100%;
   }
-  .sliders{
+  .sliders {
     height: 880px;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  .header__title{
+  .header__title {
     left: 50px;
   }
-  .header__bottom{
+  .header__bottom {
     height: auto;
   }
-  form input, form select{
+  form input, form select {
     margin-bottom: 20px;
   }
   .bout img, .departure img {
@@ -517,7 +533,7 @@ form {
   .book__room {
     height: 100%;
   }
-  .sliders{
+  .sliders {
     height: 900px;
   }
 }

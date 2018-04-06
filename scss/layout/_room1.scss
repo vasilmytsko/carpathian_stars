@@ -1,0 +1,97 @@
+/*
+================================================================================
+|                                     ROOMS 1                                  |
+================================================================================
+*/
+.room__standard {
+  background-color: rgba(27, 94, 32, .64);
+  width: 100%;
+}
+.room1__overlay{
+  background: url("../img/room1bg.png") no-repeat;
+  background-position: 50% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.room__standard .header,
+.room__standard .header__bottom {
+  position: relative;
+}
+
+.box__text {
+  padding-left: 30px;
+  color: $text-color2;
+  h3 {
+    color: $text-color2;
+    font-size: 2.6rem;
+    margin-bottom: 35px;
+  }
+  p {
+    font-size: 2rem;
+    line-height: 24px;
+  }
+  span {
+    display: block;
+    font-size: 2.4rem;
+    margin: 20px 0 30px 0;
+  }
+  li {
+    font-size: 2rem;
+    line-height: 24px;
+  }
+  ul li:before {
+    content: "-";
+    position: relative;
+    left: -5px;
+  }
+  .each__room {
+    margin-bottom: 35px;
+  }
+  .room__cost li {
+    margin-bottom: 30px;
+  }
+}
+
+.sl__standard .slick-slide img {
+  width: 80%;
+  margin-left: 112px;
+}
+
+.sl__standard .slick-dots {
+  display: flex;
+  flex-direction: column;
+  height: 670px;
+  bottom: 27px;
+  right: 0;
+
+}
+
+.sl__standard .slick-dots li {
+  width: 100px;
+  height: 155px;
+  margin-bottom: 26px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.sl__standard .slick-dots li button {
+  width: 100px;
+  height: 155px;
+
+}
+
+.sl__standard .slick-dots li button:before {
+  z-index: 9999;
+  content: '';
+  background: url("../img/xs-sl.png");
+  width: 100px;
+  height: 155px;
+  display: block;
+  overflow: hidden;
+}

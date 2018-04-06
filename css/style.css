@@ -202,6 +202,9 @@ button {
   -ms-flex-align: end;
   align-items: flex-end; }
 
+.content__box {
+  position: relative; }
+
 .header__title {
   position: absolute;
   width: 350px;
@@ -426,7 +429,8 @@ form {
 
 .submit {
   background-color: #4caf50;
-  color: #fff; }
+  color: #fff;
+  border: 1px solid #4caf50; }
   .submit:hover {
     border: 1px solid #fff; }
 
@@ -438,13 +442,25 @@ form {
   width: 100%; }
 
 .sl .slick-dots {
-  z-index: 1; }
+  z-index: 1;
+  bottom: 50%;
+  width: 28%; }
+
+.sl .slick-dots li button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.sl .slick-dots li button:hover:before,
+.sl .slick-dots li.slick-active button:before {
+  background: #4caf50; }
 
 .sl .slick-dots li {
   margin: 0; }
-
-.sl .slick-dots li button:before {
-  color: #fff; }
 
 .sliders {
   height: 788px;
@@ -639,7 +655,6 @@ form {
 ================================================================================
 */
 .footer {
-  position: relative;
   height: 435px;
   background: #fff url("../img/tree2.png") no-repeat 0% 100%;
   -webkit-background-size: contain;
@@ -666,6 +681,11 @@ form {
   color: #000;
   font-size: 1.8rem;
   padding: 25px 50px; }
+  .contact a:hover {
+    color: #000; }
+  .contact span {
+    display: block;
+    line-height: 22px; }
 
 .phone {
   padding: 30px 0; }
@@ -783,6 +803,15 @@ html {
 body {
   width: 100%;
   height: auto; }
+
+.body__overlay {
+  background: url("../img/body.png") no-repeat;
+  background-position: 50% 0%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
 
 .wrapper {
   min-height: 100%;
@@ -963,7 +992,7 @@ h3 {
 
 .advantages {
   margin-top: 40px;
-  margin-right: 45px; }
+  margin-right: 25px; }
   .advantages ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -974,7 +1003,8 @@ h3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .advantages li {
+  .advantages li.nav-item {
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -984,11 +1014,40 @@ h3 {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    padding-left: 100px;
-    margin: 15px 0 70px;
+    margin: 15px 0 70px 0;
     color: #000;
     font-size: 1.4rem;
     font-weight: 400; }
+
+.advantages .advantages__svg {
+  position: absolute;
+  width: 53px;
+  height: 48px;
+  fill: #757575; }
+
+.advantages .advantages__svg.active {
+  fill: #4caf50; }
+
+li.nav-item:hover .advantages__svg {
+  fill: #4caf50; }
+
+.advantages .nav-tabs .nav-item.show .nav-link {
+  color: #000;
+  background: none;
+  border: none; }
+
+.advantages .nav-tabs .nav-link {
+  border: none;
+  line-height: 20px;
+  padding-left: 90px; }
+
+.advantages .nav-tabs .nav-link:hover {
+  color: #000; }
+
+.advantages .nav-tabs .nav-link.active {
+  color: #000;
+  background: none;
+  border: none; }
 
 .hotell {
   margin-top: 55px;
@@ -1001,9 +1060,16 @@ h3 {
   font-size: 2rem;
   line-height: 28px; }
 
-.spritehotell {
-  position: relative; }
-  .spritehotell span {
+.tab__svg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .tab__svg .advantages__svg {
+    width: 82px;
+    height: 77px;
+    fill: #4caf50; }
+  .tab__svg span {
     color: #e0e0e0;
     font-size: 8rem;
     font-weight: 700;
@@ -1036,10 +1102,13 @@ h3 {
 .num {
   padding: 63px 0; }
 
-figure {
+.gallery figure {
   position: relative; }
 
-figcaption {
+.gallery figure:hover figcaption {
+  opacity: 1; }
+
+.gallery figcaption {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1060,7 +1129,11 @@ figcaption {
   height: 152px;
   background-color: rgba(76, 175, 80, 0.89);
   color: #fff;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
 
 .column img {
   max-width: 372px;
@@ -1267,6 +1340,15 @@ figcaption {
 .rooms {
   margin-bottom: -100px; }
 
+.room__overlay {
+  background: url("../img/roombg.png") no-repeat;
+  background-position: 50% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
 .content {
   position: relative; }
 
@@ -1278,7 +1360,26 @@ figcaption {
   width: 100%;
   height: 100%; }
 
+.rooms figure {
+  position: relative; }
+
 .rooms figcaption {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
   width: 100%;
   height: 62px;
   background: #fff;
@@ -1296,3 +1397,91 @@ figcaption {
       margin-left: 40px;
       color: #fff;
       font-size: 5.9rem; }
+
+/*
+================================================================================
+|                                     ROOMS 1                                  |
+================================================================================
+*/
+.room__standard {
+  background-color: rgba(27, 94, 32, 0.64);
+  width: 100%; }
+
+.room1__overlay {
+  background: url("../img/room1bg.png") no-repeat;
+  background-position: 50% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.room__standard .header,
+.room__standard .header__bottom {
+  position: relative; }
+
+.box__text {
+  padding-left: 30px;
+  color: #000; }
+  .box__text h3 {
+    color: #000;
+    font-size: 2.6rem;
+    margin-bottom: 35px; }
+  .box__text p {
+    font-size: 2rem;
+    line-height: 24px; }
+  .box__text span {
+    display: block;
+    font-size: 2.4rem;
+    margin: 20px 0 30px 0; }
+  .box__text li {
+    font-size: 2rem;
+    line-height: 24px; }
+  .box__text ul li:before {
+    content: "-";
+    position: relative;
+    left: -5px; }
+  .box__text .each__room {
+    margin-bottom: 35px; }
+  .box__text .room__cost li {
+    margin-bottom: 30px; }
+
+.sl__standard .slick-slide img {
+  width: 80%;
+  margin-left: 112px; }
+
+.sl__standard .slick-dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 670px;
+  bottom: 27px;
+  right: 0; }
+
+.sl__standard .slick-dots li {
+  width: 100px;
+  height: 155px;
+  margin-bottom: 26px; }
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  opacity: 1; }
+
+.sl__standard .slick-dots li button {
+  width: 100px;
+  height: 155px; }
+
+.sl__standard .slick-dots li button:before {
+  z-index: 9999;
+  content: '';
+  background: url("../img/xs-sl.png");
+  width: 100px;
+  height: 155px;
+  display: block;
+  overflow: hidden; }

@@ -8,7 +8,15 @@ body {
   width: 100%;
   height: auto;
 }
-
+.body__overlay{
+  background: url("../img/body.png") no-repeat;
+  background-position: 50% 0%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .wrapper {
   min-height: 100%;
   position: relative;
@@ -183,23 +191,52 @@ h3 {
 
 .advantages {
   margin-top: 40px;
-  margin-right: 45px;
+  margin-right: 25px;
   ul {
     display: flex;
     flex-direction: column;
   }
-  li {
+  li.nav-item {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
-    padding-left: 100px;
-    margin: 15px 0 70px;
+    margin: 15px 0 70px 0;
     color: $text-color2;
     font-size: 1.4rem;
     font-weight: 400;
   }
 }
-
+.advantages .advantages__svg{
+  position: absolute;
+  width: 53px;
+  height: 48px;
+  fill: $text-color3;
+}
+.advantages .advantages__svg.active{
+  fill: $text-color5;
+}
+li.nav-item:hover .advantages__svg{
+    fill: $text-color5;
+}
+.advantages .nav-tabs .nav-item.show .nav-link{
+  color: $text-color2;
+  background: none;
+  border: none;
+}
+.advantages .nav-tabs .nav-link{
+  border: none;
+  line-height: 20px;
+  padding-left: 90px;
+}
+.advantages .nav-tabs .nav-link:hover{
+  color: $text-color2;
+}
+.advantages .nav-tabs .nav-link.active {
+  color: $text-color2;
+  background: none;
+  border: none;
+}
 .hotell {
   margin-top: 55px;
   margin-left: 90px;
@@ -213,8 +250,13 @@ h3 {
   line-height: 28px;
 }
 
-.spritehotell {
-  position: relative;
+.tab__svg {
+  display: flex;
+  .advantages__svg{
+    width: 82px;
+    height: 77px;
+    fill: $text-color5;
+  }
   span {
     color: $text-color4;
     font-size: 8rem;
@@ -245,11 +287,14 @@ h3 {
   padding: 63px 0;
 }
 
-figure {
+.gallery figure {
   position: relative;
 }
 
-figcaption {
+.gallery figure:hover figcaption {
+  opacity: 1;
+}
+.gallery figcaption{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,8 +307,9 @@ figcaption {
   background-color: rgba(76, 175, 80, .89);
   color: $text-color;
   font-size: 1.8rem;
+  opacity: 0;
+  @include transition(.5s);
 }
-
 .column img {
   max-width: 372px;
   height: 356px;
@@ -330,6 +376,7 @@ figcaption {
   .advantages {
     margin: 10px;
   }
+
   .hotell {
     margin: 10px;
     p {

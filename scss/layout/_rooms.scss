@@ -6,7 +6,15 @@
 .rooms {
   margin-bottom: -100px;
 }
-
+.room__overlay{
+  background: url("../img/roombg.png") no-repeat;
+  background-position: 50% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .content {
   position: relative;
 }
@@ -19,8 +27,17 @@
   width: 100%;
   height: 100%;
 }
-
+.rooms figure {
+  position: relative;
+}
 .rooms figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
   width: 100%;
   height: 62px;
   background: $bg-color2;

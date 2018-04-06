@@ -1,4 +1,3 @@
-/* menu*/
 $(function () {
 
     /*preloader*/
@@ -21,10 +20,11 @@ $(function () {
     });
 
     /*active*/
-    $('ul li a').click(function () {
-        $('li a').removeClass("active");
+    $('.menu__link').click(function () {
+        $('li .menu__link').removeClass("active");
         $(this).addClass("active");
     });
+
 
     /*data*/
     $("#datepicker").datepicker({
@@ -49,7 +49,7 @@ $(function () {
     $('.sl').slick({
         autoplay: true,
         autoplaySpeed: 3000,
-        dots: false,
+        dots: true,
         arrows: false,
         speed: 3000,
         fade: true,
@@ -62,6 +62,23 @@ $(function () {
         } else {
             $('.sl').slick("setOption", "autoplaySpeed", 4000);
         }
+    });
+    $('.sl__rooms').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        arrows: false,
+        speed: 3000,
+        fade: true
+    });
+    $('.sl__standard').slick({
+        dots: true,
+        //vertical: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        //verticalSwiping: true,
+        arrows: false,
+        fade: true
     });
 });
 
