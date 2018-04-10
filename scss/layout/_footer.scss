@@ -14,14 +14,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 90px 0 110px;
+  margin: 90px 0 110px;
 }
 
 .contact {
+  width: 84%;
   background-color: $bg-color2;
   color: $text-color2;
   font-size: 1.8rem;
-  padding: 25px 50px;
+  padding: 50px 25px;
+  box-shadow: 0 5px 114px rgba(0, 0, 0, 0.1);
   a:hover{
     color: $text-color2;
   }

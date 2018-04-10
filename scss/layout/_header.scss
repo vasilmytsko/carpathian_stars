@@ -183,8 +183,18 @@
   right: 0;
   height: 200px;
   background-color: rgba(27, 94, 32, .64);
+  @include transition(.5s);
+  z-index: 1;
 }
-
+.fix{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-color: #6e9871;
+  z-index: 5;
+}
 .book__room {
   height: 200px;
   display: flex;
@@ -254,7 +264,10 @@ form {
     border: 1px solid $bg-color2;
   }
 }
-
+.sl {
+  height: 788px;
+  overflow: hidden;
+}
 .sl .sl__slider {
   text-align: center;
   color: $text-color;
@@ -267,30 +280,46 @@ form {
 .sl .slick-dots {
   z-index: 1;
   bottom: 50%;
-  width: 28%;
+  left: 11%;
+  width: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-.sl .slick-dots li button:before {
-  content: "";
+.sl .slick-dots li{
   width: 10px;
   height: 10px;
-  background: rgba(255, 255, 255, .2);
-  @include transition(.3s);
 }
 
-.sl .slick-dots li button:hover:before,
-.sl .slick-dots li.slick-active button:before {
+.sl .slick-dots li button{
+  display: flex;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background: rgba(255, 255, 255, .2);
+}
+.sl .slick-dots li button:before {
+  display: none;
+}
+.sl .slick-dots li button:hover {
   background: $bg-color3;
+}
+.sl .slick-dots li.slick-active{
+  width: 13px;
+  height: 13px;
+}
+.sl .slick-dots li.slick-active button {
+  background: $bg-color3;
+  width: 13px;
+  height: 13px;
 }
 
 .sl .slick-dots li {
   margin: 0;
 }
 
-.sliders {
-  height: 788px;
-  overflow: hidden;
-}
+
 
 @media all and (max-width: 767px) {
   .header {

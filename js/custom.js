@@ -24,6 +24,10 @@ $(function () {
         $('li .menu__link').removeClass("active");
         $(this).addClass("active");
     });
+    $('.advantages__svg').click(function () {
+        $('li .nav-link .advantages__svg').removeClass("active");
+        $(this).addClass("active");
+    });
 
 
     /*data*/
@@ -42,12 +46,23 @@ $(function () {
 
     /* phone mask*/
     $("#phone").mask("8(999) 999-9999");
+
+    /*waypoint*/
+    $('.header__bottom').waypoint(function(direction) {
+
+        if (direction ==='down') {
+            $(".header__bottom").addClass('fix');
+        }
+        else {
+            $(".header__bottom").removeClass('fix');
+        }
+    },{ offset: '0%' });
 });
 
 /*slider*/
 $(function () {
     $('.sl').slick({
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         dots: true,
         arrows: false,
