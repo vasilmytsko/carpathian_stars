@@ -157,29 +157,8 @@ h3 {
   font-size: 1.6rem;
   color: $text-color;
   overflow: hidden;
-  span {
-    position: relative;
-    color: $text-color;
-    @include transition(.5s);
-    z-index: 2;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: $bg-color2;
-    @include transition(.5s);
-    z-index: 1;
-  }
-  &:hover:before {
-    left: 0;
-    z-index: 1;
-  }
-  &:hover span {
-    color: $text-color5;
+  &:hover {
+    background-color: $bg-color5;
   }
 }
 

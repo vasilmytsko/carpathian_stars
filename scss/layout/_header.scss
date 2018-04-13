@@ -222,9 +222,16 @@ form {
     padding: 16px;
   }
 }
-
 .ui-datepicker {
-  font-size: 12pt !important
+  font-size: 12pt !important;
+  color: $text-color5;
+  .ui-datepicker-header{
+    color: $text-color5;
+  }
+  .ui-state-default {
+    color: $text-color5;
+    border: 1px solid $bg-color5;
+  }
 }
 
 .my-data {
@@ -259,9 +266,9 @@ form {
 .submit {
   background-color: $bg-color3;
   color: $text-color;
-  border: 1px solid $bg-color3;
+  @include transition(.5s);
   &:hover {
-    border: 1px solid $bg-color2;
+    background-color: $bg-color5;
   }
 }
 .sl {

@@ -25,7 +25,7 @@
   padding: 50px 24px;
   box-shadow: 0 5px 114px rgba(0, 0, 0, 0.1);
   a:hover{
-    color: $text-color2;
+    color: $text-color5;
   }
   span{
     display: block;
@@ -54,7 +54,7 @@
   }
 }
 
-.begin {
+.btn__begin {
   a {
     display: block;
     width: 357px;
@@ -69,27 +69,11 @@
     letter-spacing: 1px;
     text-align: center;
     overflow: hidden;
-    span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    &:hover{
+      background-color: #449C44;
+      border: 2px solid #449C44;
+      color: $text-color;
     }
-  }
-  a span:nth-child(1) {
-    transform: translateX(-100%);
-  }
-  a:hover span:nth-child(1) {
-    transform: translateX(0);
-    @include transition(.5s);
-  }
-  a span:nth-child(2) {
-    transform: translateX(0);
-  }
-  a:hover span:nth-child(2) {
-    transform: translateX(100%);
-    @include transition(.5s);
   }
 }
 

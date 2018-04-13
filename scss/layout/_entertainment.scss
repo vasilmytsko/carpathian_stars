@@ -1,0 +1,118 @@
+/*
+================================================================================
+|                                     ROOMS 1                                  |
+================================================================================
+*/
+.entertainment__overlay{
+  background: url("../img/entertainment.png") no-repeat;
+  background-position: 50% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.entertainment__services {
+  padding-top: 70px;
+  background: url("../img/tree.png") no-repeat 0% 100%;
+  background-size: contain;
+}
+
+.sanatorium__services {
+  margin-top: 95px;
+  margin-left: 90px;
+  p {
+    width: 82%;
+    margin-top: 30px;
+    color: $text-color2;
+    font-size: 2rem;
+    line-height: 28px;
+  }
+}
+.entertainment__rest{
+  margin-top: 50px;
+}
+.sl__entertainment {
+
+  figure {
+    position: relative;
+    margin: 15px;
+  }
+  h3{
+    width: 63%;
+    color: $text-color;
+    font-size: 1.8rem;
+    padding-top: 0;
+    line-height: 20px;
+  }
+  figcaption {
+    width: 100%;
+    height: 119px;
+    position: absolute;
+    bottom: 0;
+    background-color: $bg-color3;
+    padding: 20px 10px;
+  }
+  .entertainment__text{
+    width: 92%;
+    color: $text-color;
+    font-size: 1.2rem;
+  }
+}
+.name__excursion{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.entertainment__btn{
+  background-color: $bg-color2;
+  padding: 10px 23px;
+  color: $text-color5;
+  font-size: 1.2rem;
+  &:hover{
+    background-color: $bg-color5;
+    color: $text-color;
+  }
+}
+
+.sl__entertainment .slick-dots {
+  z-index: 1;
+  bottom: -25px;
+  right: 3px;
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sl__entertainment .slick-dots li{
+  width: 10px;
+  height: 10px;
+}
+
+.sl__entertainment .slick-dots li button{
+  display: flex;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background: rgba(0, 0, 0, .18);
+}
+.sl__entertainment .slick-dots li button:before {
+  display: none;
+}
+.sl__entertainment .slick-dots li button:hover {
+  background: $bg-color3;
+}
+.sl__entertainment .slick-dots li.slick-active{
+  width: 13px;
+  height: 13px;
+}
+.sl__entertainment .slick-dots li.slick-active button {
+  background: $bg-color3;
+  width: 13px;
+  height: 13px;
+}
+
+.sl__entertainment .slick-dots li {
+  margin: 0;
+}
