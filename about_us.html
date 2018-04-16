@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rooms</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
@@ -20,7 +20,7 @@
 <div class="preloader">
     <div class="loader"></div>
 </div>
-<div class="room__overlay"></div>
+<div class="body__overlay"></div>
 <div class="wrapper" id="main">
     <div class="wrap__top">
         <!--===========================  HEADER ============================================-->
@@ -31,13 +31,11 @@
                         <div class="header__wrap">
                             <nav class="menu">
                                 <ul class="menu__list">
-                                    <li class="menu__item"><a href="index.html" class="menu__link ">Головна</a>
+                                    <li class="menu__item"><a href="index.html" class="menu__link">Головна</a>
                                     </li>
-                                    <li class="menu__item"><a href="#" class="menu__link">Про нас</a></li>
+                                    <li class="menu__item"><a href="about_us.html" class="menu__link active">Про нас</a></li>
                                     <li class="menu__item">
-                                        <input type="checkbox" name="toggle" class="toggle__submenu" id="sub_m1">
                                         <a href="treatment.html" class="menu__link">Лікування</a>
-                                        <label for="sub_m1" class="toggle__submenu"><i class="fa"></i></label>
                                         <div class="panel">
                                             <ul>
                                                 <li class="has-children"><span>Види лікування</span>
@@ -126,8 +124,9 @@
                                         </div>
                                     </li>
                                     <li class="menu__item"><a href="gallery.html" class="menu__link">Галерея</a></li>
-                                    <li class="menu__item"><a href="entertainment.html" class="menu__link">Розваги</a></li>
-                                    <li class="menu__item"><a href="rooms.html" class="menu__link active">Номери</a></li>
+                                    <li class="menu__item"><a href="entertainment.html" class="menu__link">Розваги</a>
+                                    </li>
+                                    <li class="menu__item"><a href="rooms.html" class="menu__link">Номери</a></li>
                                     <li class="menu__item"><a href="contacts.html" class="menu__link">Контакти</a></li>
                                 </ul>
                             </nav>
@@ -140,21 +139,41 @@
 
 
         <!--===========================  Content ===========================================-->
-        <div class="container">
-            <div class="content__top">
-                <div class="header__title">
-                    <span>Знижки до 50% номери Люкс</span>
+        <div class="content">
+            <div class="container">
+                <div class="content__box">
+                    <div class="about__us-title">
+                        <p>Санаторій «Карпатські зорі» знаходиться в місті Косові,
+                            Івано-Франківської області, в мальовничому куточку
+                            поблизу підніжжя Покутсько-Буковинських Карпат на
+                            березі річки Рибниця.
+                        </p>
+                        <p>
+                            Наш санаторій одночасно може прийняти 100 осіб в 26
+                            однокімнатних двохмісних номерах і в 18 «Люкс» номерах,
+                            де може проживати сім'я із 3-х осіб.В кожному номері
+                            телевізор (кабельне телебачення), холодильник, телефон,
+                            повний санвузол, холодна і гаряча вода цілодобово.
+                            Повноцінне рьохразове харчування в кафе санаторію.
+                            Санаторій "Карпатські зорі" проводить лікування згідно
+                            Ліцензії Міністерства охорони здоров'я України
+                            Серія АВ № 394128 від 10.01. 2008 р
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
-        <div class="overlay"></div>
         <div class="sliders">
-            <div class="sl__rooms">
+            <div class="sl__about">
                 <div class="sl__slider">
-                    <img src="img/slider-3.png" alt="" class="sl__img">
+                    <img src="img/slider-1.png" alt="" class="sl__img">
                 </div>
                 <div class="sl__slider">
-                    <img src="img/slider-4.png" alt="" class="sl__img">
+                    <img src="img/slider-2.png" alt="" class="sl__img">
+                </div>
+                <div class="sl__slider">
+                    <img src="img/slider-5.png" alt="" class="sl__img">
                 </div>
             </div>
         </div>
@@ -205,40 +224,153 @@
         </div>
         <!--===========================  end Content ======================================-->
     </div>
-
-    <!--===========================  Rooms  =============================================-->
-    <section class="rooms">
+    <!--===========================  About =============================================-->
+    <section class="about__us">
         <div class="container">
-            <div class="rows">
-                <div class="column num">
-                    <a href="room1.html">
-                        <figure>
-                            <p><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
-                            <figcaption>Стандарт</figcaption>
-                        </figure>
-                    </a>
+            <div class="row">
+                <div class="col">
+                    <div class="company__title text-center">
+                        <h2>Активний відпочинок</h2>
+                    </div>
                 </div>
-                <div class="column column__center">
-                    <a href="room2.html">
-                        <figure>
-                            <p><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
-                            <figcaption>Люкс</figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="column num">
-                    <a href="room3.html">
-                        <figure>
-                            <p><img src="img/gallery-2.png" alt="" class="img-fluid"/></p>
-                            <figcaption>Напів люкс</figcaption>
-                        </figure>
-                    </a>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="sliders">
+                        <div class="sl__entertainment">
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl1.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl2.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl3.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl1.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl2.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl3.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl1.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl2.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="sl__slider">
+                                <figure>
+                                    <p><img src="img/sl3.png" alt="" class="img-fluid"/></p>
+                                    <figcaption>
+                                        <div class="name__excursion">
+                                            <h3> Екскурсія на водопад Млин</h3>
+                                            <a class="entertainment__btn" href="#">Детальніше</a>
+                                        </div>
+                                        <p class="entertainment__text">Санаторій «Карпатські зорі» знаходиться в м.
+                                            Косові,
+                                            Івано-Франківської області, в мальовничому куточку</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--===========================  end Rooms   =========================================-->
-
+    <!--===========================  end About   =========================================-->
 
     <div class="empty"></div>
 </div>

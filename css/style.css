@@ -188,6 +188,9 @@ button {
   background-color: rgba(255, 255, 255, 0.55);
   z-index: 9999; }
 
+.header__contacts {
+  background-color: #fff; }
+
 .header__wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -259,7 +262,7 @@ button {
 .menu__link {
   display: block;
   color: #000;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.64px;
@@ -784,6 +787,20 @@ form {
     background-color: #449C44;
     border: 2px solid #449C44;
     color: #fff; }
+
+.footer__contact {
+  display: none; }
+
+.footer__box-contact {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 170px; }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .footer {
@@ -1684,3 +1701,74 @@ li.nav-item:hover .advantages__svg {
 
 .sl__entertainment .slick-dots li {
   margin: 0; }
+
+/*
+================================================================================
+|                                   Gallery                                  |
+================================================================================
+*/
+.about__us {
+  margin-top: 60px; }
+
+.about__us-title {
+  position: absolute;
+  width: 45.1%;
+  top: 130px;
+  left: 0;
+  z-index: 1; }
+  .about__us-title p {
+    width: 100%;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1.4;
+    letter-spacing: .6px;
+    margin-top: 25px; }
+
+.sl__about {
+  height: 788px;
+  overflow: hidden; }
+
+/*
+================================================================================
+|                                     Treatment                                  |
+================================================================================
+*/
+.treatment {
+  margin-top: 30px; }
+  .treatment img {
+    width: 100%;
+    height: auto; }
+  .treatment .treatment__text {
+    padding: 70px 20px;
+    color: #000;
+    font-size: 20px;
+    line-height: 22px; }
+
+/*
+================================================================================
+|                                   Contacts                                  |
+================================================================================
+*/
+.contacts__overlay {
+  background: url("../img/contactsbg.png") no-repeat;
+  background-position: 50% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.contacts {
+  position: relative; }
+
+.map {
+  width: 100%;
+  height: 690px;
+  position: relative; }
+
+.contacts__addres {
+  position: absolute;
+  top: -500px;
+  left: 50px; }
+  .contacts__addres .contact {
+    width: 100%; }

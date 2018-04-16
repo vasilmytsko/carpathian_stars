@@ -76,6 +76,14 @@
     }
   }
 }
+.footer__contact{
+  display: none;
+}
+.footer__box-contact{
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 170px;
+}
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .footer {

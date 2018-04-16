@@ -78,6 +78,14 @@ $(function () {
             $('.sl').slick("setOption", "autoplaySpeed", 4000);
         }
     });
+    $('.sl__about').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        arrows: false,
+        speed: 3000,
+        fade: true
+    });
     $('.sl__rooms').slick({
         autoplay: true,
         autoplaySpeed: 3000,
@@ -102,5 +110,59 @@ $(function () {
 });
 
 
+/*maps*/
+
+function initMap() {
+    var location = {lat: 48.311433, lng: 25.074230};
+    var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 17,
+        center: location,
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.LEFT_BOTTOM
+        },
+        scrollwheel: false,
+        streetViewControl: false,
+        scaleControl: false,
+        tilesloaded: false,
+        mapTypeControl: false,
+        fullscreenControl: false
+    });
+    var iconBase = 'img/';
+    var icons = {
+        marker: {
+            icon: iconBase + 'm.png'
+        }
+    };
+    var features = [
+        {
+            position: new google.maps.LatLng(48.311317, 25.076575),
+            type: 'marker'
+        }
+    ];
+    features.forEach(function(feature) {
+        var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+        });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent">'+
+            '<p>м. Косів, вул. Над Гуком, 15.</p>'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    });
+
+
+}
 
 

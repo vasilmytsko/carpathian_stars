@@ -1,0 +1,27 @@
+/*
+================================================================================
+|                                   Gallery                                  |
+================================================================================
+*/
+.about__us{
+  margin-top: 60px;
+}
+.about__us-title {
+  position: absolute;
+  width: 45.1%;
+  top: 130px;
+  left: 0;
+  z-index: 1;
+  p {
+    width: 100%;
+    font-size: 1.8rem;
+    color: $text-color;
+    line-height: 1.4;
+    letter-spacing: .6px;
+    margin-top: 25px
+  }
+}
+.sl__about{
+  height: 788px;
+  overflow: hidden;
+}
