@@ -173,6 +173,12 @@ button {
 .wrap__top {
   position: relative; }
 
+.wrap__top-about {
+  background: url("../img/slider-1.png") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 788px; }
+
 .header {
   position: absolute;
   top: 0;
@@ -959,7 +965,7 @@ h3 {
 .about {
   margin-top: 165px;
   margin-bottom: 140px;
-  background-color: #4caf50; }
+  background-color: rgba(76, 175, 80, 0.82); }
   .about p {
     color: #fff;
     font-size: 1.8rem;
@@ -1133,10 +1139,18 @@ li.nav-item:hover .advantages__svg {
   position: relative;
   -webkit-box-shadow: 0 0 38px rgba(0, 0, 0, 0.18);
   box-shadow: 0 0 38px rgba(0, 0, 0, 0.18);
-  margin-bottom: 20px; }
+  background-color: #000;
+  margin-bottom: 20px;
+  overflow: hidden; }
 
 .gallery figure:hover figcaption {
   opacity: 1; }
+
+.gallery figure:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: .5; }
 
 .gallery figcaption {
   display: -webkit-box;
@@ -1166,10 +1180,12 @@ li.nav-item:hover .advantages__svg {
   transition: 0.5s; }
 
 .column img {
-  max-width: 352px;
   height: 352px;
   width: 100%;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
 
 @media screen and (max-width: 800px) {
   .column {
@@ -1393,7 +1409,15 @@ li.nav-item:hover .advantages__svg {
 .rooms figure {
   position: relative;
   -webkit-box-shadow: 0 0 38px rgba(0, 0, 0, 0.18);
-  box-shadow: 0 0 38px rgba(0, 0, 0, 0.18); }
+  box-shadow: 0 0 38px rgba(0, 0, 0, 0.18);
+  background: #000;
+  overflow: hidden; }
+
+.rooms figure:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: .5; }
 
 .rooms figcaption {
   display: -webkit-box;
@@ -1715,7 +1739,7 @@ li.nav-item:hover .advantages__svg {
   width: 45.1%;
   top: 130px;
   left: 0;
-  z-index: 1; }
+  z-index: 2; }
   .about__us-title p {
     width: 100%;
     font-size: 1.8rem;

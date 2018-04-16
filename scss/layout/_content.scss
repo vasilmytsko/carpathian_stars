@@ -111,7 +111,7 @@ h3 {
 .about {
   margin-top: 165px;
   margin-bottom: 140px;
-  background-color: $bg-color3;
+  background-color: $bg-color6;
   p {
 
     color: $text-color;
@@ -273,11 +273,17 @@ li.nav-item:hover .advantages__svg{
 .gallery figure {
   position: relative;
   box-shadow: 0 0 38px rgba(0, 0, 0, 0.18);
+  background-color: $bg-color;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .gallery figure:hover figcaption {
   opacity: 1;
+}
+.gallery figure:hover img {
+  transform: scale(1.2);
+  opacity: .5;
 }
 .gallery figcaption{
   display: flex;
@@ -296,11 +302,12 @@ li.nav-item:hover .advantages__svg{
   @include transition(.5s);
 }
 .column img {
-  max-width: 352px;
+  //max-width: 352px;
   height: 352px;
   width: 100%;
-  //margin-bottom: 20px;
   vertical-align: middle;
+  @include transition(.5s);
+
 }
 
 @media screen and (max-width: 800px) {

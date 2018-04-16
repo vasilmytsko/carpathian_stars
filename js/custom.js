@@ -136,7 +136,7 @@ function initMap() {
     };
     var features = [
         {
-            position: new google.maps.LatLng(48.311317, 25.076575),
+            position: new google.maps.LatLng(48.311357, 25.076575),
             type: 'marker'
         }
     ];
@@ -162,7 +162,8 @@ function initMap() {
         });
     });
 
-
 }
 
+/*animate*/
+new WOW().init();
 

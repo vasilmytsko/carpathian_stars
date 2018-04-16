@@ -6,7 +6,11 @@
 .wrap__top {
   position: relative;
 }
-
+.wrap__top-about{
+  background: url('../img/slider-1.png') no-repeat;
+  background-size: cover;
+  height: 788px;
+}
 .header {
   position: absolute;
   top: 0;

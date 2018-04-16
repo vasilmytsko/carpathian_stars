@@ -31,6 +31,12 @@
 .rooms figure {
   position: relative;
   box-shadow: 0 0 38px rgba(0, 0, 0, 0.18);
+  background: $bg-color;
+  overflow: hidden;
+}
+.rooms figure:hover img {
+  transform: scale(1.2);
+  opacity: .5;
 }
 .rooms figcaption {
   display: flex;
