@@ -20,52 +20,46 @@
   font-size: 1.8rem;
   font-weight: 700;
 }
+/*
 .modal__gallery{
-  //height: 800px;
   .modal-content{
     background-color: transparent;
     border: none;
   }
 }
+*/
+.popup__box{
+  width: 700px;
+  margin: auto;
+}
+.popup__btn{
+  display: block;
+  background-color: $bg-color3;
+  color: $text-color;
+  padding: 17px 35px;
+  font-size: 1.4rem;
+  border: none;
+  @include transition(.5s);
+  &:hover {
+    background-color: $bg-color5;
+    color: $text-color;
+  }
+}
 .sl__gallery{
   width: 700px;
   height: 600px;
+  margin: auto;
+}
 
+.sl__gallery2{
+  margin-top: 15px;
 }
-.sl__gallery .slick-dots {
-  display: flex;
-  justify-content: space-between;
-  bottom: -21.3333%;
-  left: 0;
-  z-index: 5;
-}
-.sl__gallery .slick-dots li {
+.sl__gallery2 img {
   width: 160px;
   height: 110px;
-  margin: 0px;
+  margin: auto;
 }
 
-.slick-dots li button:before,
-.slick-dots li.slick-active button:before {
-  opacity: 1;
-}
-
-.sl__gallery .slick-dots li button {
-  width: 160px;
-  height: 110px;
-
-}
-
-.sl__gallery .slick-dots li button:before {
-  z-index: 9999;
-  content: '';
-  background: url("../img/gallery.png");
-  background-size: cover;
-  width: 160px;
-  height: 110px;
-  display: block;
-  overflow: hidden;
-}
 .sl__gallery .slick-next::before{
   font-family: FontAwesome;
   content: '\f105';
@@ -76,5 +70,5 @@
   font-family: FontAwesome;
   content: '\f104';
   font-size: 9rem;
-  margin-left: -400px;
+  margin-left: -560px;
 }

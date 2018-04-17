@@ -107,12 +107,29 @@ $(function () {
         slidesToScroll: 3,
         arrows: false
     });
-    $('.sl__gallery').slick({
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        fade: false
+
+/*popup*/
+    $('.popup__link').magnificPopup({
+        callbacks: {
+            open: function () {
+                $('.sl__gallery').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    fade: false,
+                    asNavFor: '.sl__gallery2'
+                });
+                $('.sl__gallery2').slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    asNavFor: '.sl__gallery',
+                    dots: false,
+                    arrows: false,
+                    fade: false,
+                    focusOnSelect: true
+                });
+            }
+        }
     });
 });
 

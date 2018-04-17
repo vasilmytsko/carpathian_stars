@@ -1,0 +1,51 @@
+/*
+================================================================================
+|                                     404                                  |
+================================================================================
+*/
+.oops__error{
+  height: 780px;
+}
+.error{
+  position: relative;
+}
+.error__title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  h1{
+    font-size: 19rem;
+  }
+}
+.error__content{
+  position: absolute;
+  top:60%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.4rem;
+    width: 200px;
+    margin-bottom: 40px;
+    span{
+      display: block;
+    }
+  }
+}
+.error__link{
+  display: block;
+  background-color: $bg-color3;
+  color: $text-color;
+  padding: 17px 35px;
+  font-size: 1.4rem;
+  border: none;
+  @include transition(.5s);
+  &:hover {
+    background-color: $bg-color5;
+    color: $text-color;
+  }
+}
