@@ -192,7 +192,7 @@ button {
   -ms-flex-align: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.55);
-  z-index: 9999; }
+  z-index: 999; }
 
 .header__contacts {
   background-color: #fff; }
@@ -206,10 +206,10 @@ button {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end; }
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .content__box {
   position: relative; }
@@ -228,6 +228,18 @@ button {
     line-height: 1.4;
     letter-spacing: .6px;
     margin-top: 25px; }
+
+input[type="button"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 17px 35px;
+  font-size: 1.4rem;
+  border: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  input[type="button"]:hover {
+    background-color: #449c44; }
 
 .menu [type="checkbox"],
 .menu label.toggle__submenu {
@@ -400,8 +412,31 @@ button {
   width: 100%;
   padding: 15px 0 60px 0; }
 
+.modal__reserve {
+  position: absolute;
+  margin: 100px auto;
+  height: 660px; }
+  .modal__reserve .modal-content {
+    background-color: transparent;
+    border: none; }
+
 .form {
   width: 100%; }
+
+.form__colum {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.form_control {
+  margin-bottom: 15px;
+  width: 330px; }
 
 form {
   display: -webkit-box;
@@ -414,10 +449,10 @@ form {
   form input, form select {
     background-color: #fff;
     width: 100%;
-    height: 47px;
+    height: 85px;
     border: none;
     color: #757575;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     padding: 16px; }
 
 .ui-datepicker {
@@ -432,12 +467,20 @@ form {
 .my-data {
   position: relative; }
 
-.bout img, .departure img {
-  width: 21px;
-  height: 22px;
+.departure img {
+  width: 36px;
+  height: 38px;
   position: absolute;
-  bottom: 28%;
-  right: 12%; }
+  bottom: 56%;
+  right: 20%; }
+
+.bout img {
+  width: 36px;
+  height: 38px;
+  position: absolute;
+  right: 20%;
+  bottom: 40%;
+  z-index: 2; }
 
 .form select {
   -webkit-appearance: none;
@@ -450,10 +493,10 @@ form {
 
 .form svg {
   position: absolute;
-  bottom: 40%;
-  right: 12%;
-  width: 18px;
-  height: 9px; }
+  bottom: 26%;
+  right: 19%;
+  width: 31px;
+  height: 16px; }
 
 .submit {
   background-color: #4caf50;
@@ -1585,13 +1628,77 @@ li.nav-item:hover .advantages__svg {
 |                                   Gallery                                  |
 ================================================================================
 */
+.button-gallery-box {
+  position: absolute;
+  top: 20%;
+  right: 11%;
+  z-index: 22; }
+
 .gallery figure {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  cursor: pointer; }
 
 .more__img {
   color: #4caf50;
   font-size: 1.8rem;
   font-weight: 700; }
+
+.modal__gallery .modal-content {
+  background-color: transparent;
+  border: none; }
+
+.sl__gallery {
+  width: 700px;
+  height: 600px; }
+
+.sl__gallery .slick-dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  bottom: -21.3333%;
+  left: 0;
+  z-index: 5; }
+
+.sl__gallery .slick-dots li {
+  width: 160px;
+  height: 110px;
+  margin: 0px; }
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  opacity: 1; }
+
+.sl__gallery .slick-dots li button {
+  width: 160px;
+  height: 110px; }
+
+.sl__gallery .slick-dots li button:before {
+  z-index: 9999;
+  content: '';
+  background: url("../img/gallery.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 160px;
+  height: 110px;
+  display: block;
+  overflow: hidden; }
+
+.sl__gallery .slick-next::before {
+  font-family: FontAwesome;
+  content: '\f105';
+  font-size: 9rem;
+  margin-left: 300px; }
+
+.sl__gallery .slick-prev::before {
+  font-family: FontAwesome;
+  content: '\f104';
+  font-size: 9rem;
+  margin-left: -400px; }
 
 /*
 ================================================================================

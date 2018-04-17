@@ -30,6 +30,10 @@
                 <div class="row">
                     <div class="col">
                         <div class="header__wrap">
+                            <div class="button-reserve">
+                                <input type="button" value="Забронювати номер" data-toggle="modal"
+                                       data-target="#myModal">
+                            </div>
                             <nav class="menu">
                                 <ul class="menu__list">
                                     <li class="menu__item"><a href="index.html" class="menu__link ">Головна</a>
@@ -141,8 +145,7 @@
 
 
         <!--===========================  Content ===========================================-->
-
-        <div class="header__bottom">
+        <!--<div class="header__bottom">
             <div class="container">
                 <div class="book__room">
                     <div class="form__title">
@@ -186,10 +189,53 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!--===========================  end Content ======================================-->
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade modal__reserve" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form">
+                        <form action="#">
+                            <div class="form__colum">
+                                <div class="form_control"><input type="text" placeholder="Ім'я" required></div>
+                                <div class="form_control"><input id="phone" type="text" placeholder="Телефон"
+                                                                 required>
+                                </div>
+                                <div class="form_control bout"><input type="text" id="datepicker" class="my-data"
+                                                                      placeholder="Дата заїзду"></div>
+                                <div class="form_control departure"><input type="text" id="datepicker2"
+                                                                           class="my-data"
+                                                                           placeholder="Дата виїзду"></div>
+                                <div class="form_control"><select class="classic">
+                                    <option selected="selected">Тип номеру</option>
+                                    <option>Стандарт</option>
+                                    <option>Напів люкс</option>
+                                    <option>Люкс</option>
+                                </select>
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         enable-background="new 0 0 129 129">
+                                        <g>
+                                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="form_control">
+                                    <div class="button-submit">
+                                        <input type="submit" value="Надіслати" class="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--===========================  Room-1  =============================================-->
     <section class="standard__room">
         <div class="container">
@@ -279,7 +325,8 @@
                 </div>
             </div>
             <div class="col-md">
-                <div class="btn__begin">
+                <div class="btn__begin" data-toggle="modal"
+                     data-target="#myModal">
                     <a href="#">Почати відпочинок</a>
                 </div>
             </div>

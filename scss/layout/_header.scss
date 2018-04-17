@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, .55);
-  z-index: 9999;
+  z-index: 999;
 }
 .header__contacts{
   background-color: $bg-color2;
@@ -27,7 +27,7 @@
 .header__wrap {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   //height: 85px;
 }
 
@@ -50,6 +50,17 @@
     line-height: 1.4;
     letter-spacing: .6px;
     margin-top: 25px;
+  }
+}
+input[type="button"]{
+  background-color: $bg-color3;
+  color: $text-color;
+  padding: 17px 35px;
+  font-size: 1.4rem;
+  border: none;
+  @include transition(.5s);
+  &:hover {
+    background-color: $bg-color5;
   }
 }
 
@@ -210,21 +221,37 @@
   width: 100%;
   padding: 15px 0 60px 0;
 }
-
+.modal__reserve{
+  position: absolute;
+  margin: 100px auto;
+  height: 660px;
+  .modal-content{
+    background-color: transparent;
+    border: none;
+  }
+}
 .form {
   width: 100%;
 }
 
+.form__colum{
+  display: flex;
+  flex-direction: column;
+}
+.form_control{
+  margin-bottom: 15px;
+  width: 330px;
+}
 form {
   display: flex;
   justify-content: space-around;
   input, select {
     background-color: $bg-color2;
     width: 100%;
-    height: 47px;
+    height: 85px;
     border: none;
     color: $text-color3;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     padding: 16px;
   }
 }
@@ -244,14 +271,21 @@ form {
   position: relative;
 }
 
-.bout img, .departure img {
-  width: 21px;
-  height: 22px;
+.departure img {
+  width: 36px;
+  height: 38px;
   position: absolute;
-  bottom: 28%;
-  right: 12%;
+  bottom: 56%;
+  right: 20%;
 }
-
+.bout img{
+  width: 36px;
+  height: 38px;
+  position: absolute;
+  right: 20%;
+  bottom: 40%;
+  z-index: 2;
+}
 .form select {
   appearance: none;
   position: relative;
@@ -263,10 +297,10 @@ form {
 
 .form svg {
   position: absolute;
-  bottom: 40%;
-  right: 12%;
-  width: 18px;
-  height: 9px;
+  bottom: 26%;
+  right: 19%;
+  width: 31px;
+  height: 16px;
 }
 
 .submit {

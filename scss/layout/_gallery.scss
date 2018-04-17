@@ -3,11 +3,78 @@
 |                                   Gallery                                  |
 ================================================================================
 */
+.button-gallery-box{
+  position: absolute;
+  top: 20%;
+  right: 11%;
+  z-index: 22;
+}
+
 .gallery figure {
   margin-bottom: 20px;
+  cursor: pointer;
 }
+
 .more__img{
   color: $text-color5;
   font-size: 1.8rem;
   font-weight: 700;
+}
+.modal__gallery{
+  //height: 800px;
+  .modal-content{
+    background-color: transparent;
+    border: none;
+  }
+}
+.sl__gallery{
+  width: 700px;
+  height: 600px;
+
+}
+.sl__gallery .slick-dots {
+  display: flex;
+  justify-content: space-between;
+  bottom: -21.3333%;
+  left: 0;
+  z-index: 5;
+}
+.sl__gallery .slick-dots li {
+  width: 160px;
+  height: 110px;
+  margin: 0px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.sl__gallery .slick-dots li button {
+  width: 160px;
+  height: 110px;
+
+}
+
+.sl__gallery .slick-dots li button:before {
+  z-index: 9999;
+  content: '';
+  background: url("../img/gallery.png");
+  background-size: cover;
+  width: 160px;
+  height: 110px;
+  display: block;
+  overflow: hidden;
+}
+.sl__gallery .slick-next::before{
+  font-family: FontAwesome;
+  content: '\f105';
+  font-size: 9rem;
+  margin-left: 300px;
+}
+.sl__gallery .slick-prev::before{
+  font-family: FontAwesome;
+  content: '\f104';
+  font-size: 9rem;
+  margin-left: -400px;
 }

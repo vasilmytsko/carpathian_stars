@@ -107,6 +107,13 @@ $(function () {
         slidesToScroll: 3,
         arrows: false
     });
+    $('.sl__gallery').slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: false
+    });
 });
 
 

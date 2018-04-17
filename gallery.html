@@ -30,6 +30,10 @@
                 <div class="row">
                     <div class="col">
                         <div class="header__wrap">
+                            <div class="button-reserve">
+                                <input type="button" value="Забронювати номер" data-toggle="modal"
+                                       data-target="#myModal">
+                            </div>
                             <nav class="menu">
                                 <ul class="menu__list">
                                     <li class="menu__item"><a href="index.html" class="menu__link ">Головна</a>
@@ -37,7 +41,7 @@
                                     <li class="menu__item"><a href="about_us.html" class="menu__link">Про нас</a></li>
                                     <li class="menu__item">
                                         <input type="checkbox" name="toggle" class="toggle__submenu" id="sub_m1">
-                                        <a href="#" class="menu__link">Лікування</a>
+                                        <a href="treatment.html" class="menu__link">Лікування</a>
                                         <label for="sub_m1" class="toggle__submenu"><i class="fa"></i></label>
                                         <div class="panel">
                                             <ul>
@@ -126,8 +130,10 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="menu__item"><a href="gallery.html" class="menu__link active">Галерея</a></li>
-                                    <li class="menu__item"><a href="entertainment.html" class="menu__link">Розваги</a></li>
+                                    <li class="menu__item"><a href="gallery.html" class="menu__link active">Галерея</a>
+                                    </li>
+                                    <li class="menu__item"><a href="entertainment.html" class="menu__link">Розваги</a>
+                                    </li>
                                     <li class="menu__item"><a href="rooms.html" class="menu__link">Номери</a></li>
                                     <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
                                 </ul>
@@ -139,8 +145,13 @@
         </header>
         <!--===========================  end HEADER ========================================-->
 
-
         <!--===========================  Content ===========================================-->
+        <div class="button-gallery-box">
+            <div class="button-gallery">
+                <input type="button" value="Переглянути фото" data-toggle="modal"
+                       data-target="#myModal2">
+            </div>
+        </div>
         <div class="sliders">
             <div class="sl__rooms">
                 <div class="sl__slider">
@@ -151,7 +162,7 @@
                 </div>
             </div>
         </div>
-        <div class="header__bottom">
+        <!--<div class="header__bottom">
             <div class="container">
                 <div class="book__room">
                     <div class="form__title">
@@ -195,49 +206,115 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!--===========================  end Content ======================================-->
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade modal__reserve" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form">
+                        <form action="#">
+                            <div class="form__colum">
+                                <div class="form_control"><input type="text" placeholder="Ім'я" required></div>
+                                <div class="form_control"><input id="phone" type="text" placeholder="Телефон"
+                                                                 required>
+                                </div>
+                                <div class="form_control bout"><input type="text" id="datepicker" class="my-data"
+                                                                      placeholder="Дата заїзду"></div>
+                                <div class="form_control departure"><input type="text" id="datepicker2"
+                                                                           class="my-data"
+                                                                           placeholder="Дата виїзду"></div>
+                                <div class="form_control"><select class="classic">
+                                    <option selected="selected">Тип номеру</option>
+                                    <option>Стандарт</option>
+                                    <option>Напів люкс</option>
+                                    <option>Люкс</option>
+                                </select>
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         enable-background="new 0 0 129 129">
+                                        <g>
+                                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="form_control">
+                                    <div class="button-submit">
+                                        <input type="submit" value="Надіслати" class="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal__gallery" id="myModal2">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="sl__gallery">
+                        <div class="sl__slider">
+                            <img src="img/gallery.png" alt="" class="sl__img">
+                        </div>
+                        <div class="sl__slider">
+                            <img src="img/gallery.png" alt="" class="sl__img">
+                        </div>
+                        <div class="sl__slider">
+                            <img src="img/gallery.png" alt="" class="sl__img">
+                        </div>
+                        <div class="sl__slider">
+                            <img src="img/gallery.png" alt="" class="sl__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--===========================  Gallery  =============================================-->
     <section class="gallery">
         <div class="container">
             <div class="rows">
                 <div class="column num">
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-3.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-3.png" alt="" class="img-fluid"/></p>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-6.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-6.png" alt="" class="img-fluid"/></p>
                     </figure>
                 </div>
                 <div class="column column__center">
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-1.png" alt="" class="img-fluid"/></p>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-7.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-7.png" alt="" class="img-fluid"/></p>
                     </figure>
-                    <form  action="#" method="POST">
+                    <form action="#" method="POST">
                         <input type="submit" name="more" value="+ Більше фото" class="more__img">
                     </form>
 
                 </div>
                 <div class="column num">
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-2.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-2.png" alt="" class="img-fluid"/></p>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-5.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-5.png" alt="" class="img-fluid"/></p>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration = "2s" data-wow-delay = "1s" data-wow-offset = "50">
-                        <p><img src="img/gallery-8.png" alt="" class="img-fluid"/></p>
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                        <p data-toggle="modal" data-target="#myModal2"><img src="img/gallery-8.png" alt="" class="img-fluid"/></p>
                     </figure>
                 </div>
             </div>
@@ -282,7 +359,8 @@
                 </div>
             </div>
             <div class="col-md">
-                <div class="btn__begin">
+                <div class="btn__begin" data-toggle="modal"
+                     data-target="#myModal">
                     <a href="#">Почати відпочинок</a>
                 </div>
             </div>
