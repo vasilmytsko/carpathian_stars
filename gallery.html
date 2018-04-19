@@ -22,9 +22,9 @@
 <div class="preloader">
     <div class="loader"></div>
 </div>
-<div class="room__overlay"></div>
+<div class="gallery__overlay"></div>
 <div class="wrapper" id="main">
-    <div class="wrap__top">
+    <div class="wrap__top wrap__top__color">
         <!--===========================  HEADER ============================================-->
         <header class="header">
             <div class="container">
@@ -32,8 +32,7 @@
                     <div class="col">
                         <div class="header__wrap">
                             <div class="button-reserve">
-                                <input type="button" value="Забронювати номер" data-toggle="modal"
-                                       data-target="#myModal">
+                                <a href="#popup2" class="popup__link2 reserve__link">Забронювати номер</a>
                             </div>
                             <nav class="menu">
                                 <ul class="menu__list">
@@ -164,166 +163,9 @@
                 </div>
             </div>
         </div>
-        <!--<div class="header__bottom">
-            <div class="container">
-                <div class="book__room">
-                    <div class="form__title">
-                        <div class="row">
-                            <div class="col"><h3>Забронювати номер зараз</h3></div>
-                        </div>
-                    </div>
-                    <div class="form">
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-lg col-md-6"><input type="text" placeholder="Ім'я" required></div>
-                                <div class="col-lg col-md-6"><input id="phone" type="text" placeholder="Телефон"
-                                                                    required>
-                                </div>
-                                <div class="col-lg col-md-6 bout"><input type="text" id="datepicker" class="my-data"
-                                                                         placeholder="Дата заїзду"></div>
-                                <div class="col-lg col-md-6 departure"><input type="text" id="datepicker2"
-                                                                              class="my-data"
-                                                                              placeholder="Дата виїзду"></div>
-                                <div class="col-lg col-md-6"><select class="classic">
-                                    <option selected="selected">Тип номеру</option>
-                                    <option>Стандарт</option>
-                                    <option>Напів люкс</option>
-                                    <option>Люкс</option>
-                                </select>
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         enable-background="new 0 0 129 129">
-                                        <g>
-                                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="col-lg col-md-6">
-                                    <div class="button-submit">
-                                        <input type="submit" value="Надіслати" class="submit">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <!--===========================  end Content ======================================-->
     </div>
     <!-- Modal -->
-    <div class="modal fade modal__reserve" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="form">
-                        <form action="#">
-                            <div class="form__colum">
-                                <div class="form_control"><input type="text" placeholder="Ім'я" required></div>
-                                <div class="form_control"><input id="phone" type="text" placeholder="Телефон"
-                                                                 required>
-                                </div>
-                                <div class="form_control bout"><input type="text" id="datepicker" class="my-data"
-                                                                      placeholder="Дата заїзду"></div>
-                                <div class="form_control departure"><input type="text" id="datepicker2"
-                                                                           class="my-data"
-                                                                           placeholder="Дата виїзду"></div>
-                                <div class="form_control"><select class="classic">
-                                    <option selected="selected">Тип номеру</option>
-                                    <option>Стандарт</option>
-                                    <option>Напів люкс</option>
-                                    <option>Люкс</option>
-                                </select>
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         enable-background="new 0 0 129 129">
-                                        <g>
-                                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="form_control">
-                                    <div class="button-submit">
-                                        <input type="submit" value="Надіслати" class="submit">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--<div class="modal fade modal__gallery" id="myModal2">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                &lt;!&ndash; Modal body &ndash;&gt;
-                <div class="modal-body">
-                    <div class="slider">
-                        <div class="sl__gallery">
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                        </div>
-                        <div class="sl__gallery2">
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                            <div class="sl__slider">
-                                <img src="img/gallery.png" alt="" class="sl__img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
     <div id="popup" class="mfp-hide popup__box">
         <div class="slider">
             <div class="sl__gallery">
@@ -386,29 +228,65 @@
             </div>
         </div>
     </div>
+    <div id="popup2" class="mfp-hide popup__box2">
+        <div class="form">
+            <form action="#">
+                <div class="form__colum">
+                    <div class="form_control"><input type="text" placeholder="Ім'я" required></div>
+                    <div class="form_control"><input id="phone" type="text" placeholder="Телефон"
+                                                     required>
+                    </div>
+                    <div class="form_control bout"><input type="text" id="datepicker" class="my-data"
+                                                          placeholder="Дата заїзду"></div>
+                    <div class="form_control departure"><input type="text" id="datepicker2"
+                                                               class="my-data"
+                                                               placeholder="Дата виїзду"></div>
+                    <div class="form_control"><select class="classic">
+                        <option selected="selected">Тип номеру</option>
+                        <option>Стандарт</option>
+                        <option>Напів люкс</option>
+                        <option>Люкс</option>
+                    </select>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             enable-background="new 0 0 129 129">
+                            <g>
+                                <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="form_control">
+                        <div class="button-submit">
+                            <input type="submit" value="Надіслати" class="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <!--===========================  Gallery  =============================================-->
     <section class="gallery">
         <div class="container">
             <div class="rows">
                 <div class="column num">
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-1.png" alt="" class="img-fluid"/></a>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-3.png" alt="" class="img-fluid"/></a>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-6.png" alt="" class="img-fluid"/></a>
                     </figure>
                 </div>
                 <div class="column column__center">
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-1.png" alt="" class="img-fluid"/></a>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-1.png" alt="" class="img-fluid"/></a>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-7.png" alt="" class="img-fluid"/></a>
                     </figure>
                     <form action="#" method="POST">
@@ -417,13 +295,13 @@
 
                 </div>
                 <div class="column num">
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-2.png" alt="" class="img-fluid"/></a>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-5.png" alt="" class="img-fluid"/></a>
                     </figure>
-                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="50">
+                    <figure class="wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <a href="#popup" class="popup__link"><img src="img/gallery-8.png" alt="" class="img-fluid"/></a>
                     </figure>
                 </div>
@@ -471,7 +349,7 @@
             <div class="col-md">
                 <div class="btn__begin" data-toggle="modal"
                      data-target="#myModal">
-                    <a href="#">Почати відпочинок</a>
+                    <a href="#popup2" class="popup__link2">Почати відпочинок</a>
                 </div>
             </div>
         </div>

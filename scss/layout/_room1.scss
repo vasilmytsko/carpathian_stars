@@ -4,6 +4,7 @@
 ================================================================================
 */
 .standard__room{
+  margin-top: 120px;
   margin-bottom: -80px;
 }
 .room__standard {
@@ -12,16 +13,20 @@
 }
 .room1__overlay{
   background: url("../img/room1bg.png") no-repeat;
-  background-position: 50% 100%;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  animation: 40s animatedBackgroundRoom1 infinite linear alternate;
 }
-.room__standard .header,
-.room__standard .header__bottom {
-  position: relative;
+@keyframes animatedBackgroundRoom1 {
+  0% {
+    background-position: 50% 16%;
+  }
+  100% {
+    background-position: 50% 85%;
+  }
 }
 .room__standard .header__bottom{
   bottom: 0;
@@ -32,15 +37,7 @@
   z-index: 555;
   background-color: #6e9871;
 }
-.room__standard .fix{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background-color: #6e9871;
-  z-index: 555;
-}
+
 .sl__standard{
   height: 670px;
   overflow: hidden;

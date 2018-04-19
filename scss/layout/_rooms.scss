@@ -8,12 +8,20 @@
 }
 .room__overlay{
   background: url("../img/roombg.png") no-repeat;
-  background-position: 50% 100%;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  animation: 20s animatedBackgroundRooms infinite linear alternate;
+}
+@keyframes animatedBackgroundRooms {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 40%;
+  }
 }
 .content {
   position: relative;

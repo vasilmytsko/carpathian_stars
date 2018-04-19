@@ -3,6 +3,24 @@
 |                                   Gallery                                  |
 ================================================================================
 */
+.gallery__overlay {
+  background: url("../img/gallerybg.png") no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: 20s animatedBackgroundGallery infinite linear alternate;
+}
+
+@keyframes animatedBackgroundGallery {
+  0% {
+    background-position: 50% -30%;
+  }
+  100% {
+    background-position: 50% 40%;
+  }
+}
 .button-gallery-box{
   position: absolute;
   top: 20%;

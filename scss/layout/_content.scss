@@ -8,15 +8,27 @@ body {
   width: 100%;
   height: auto;
 }
-.body__overlay{
+
+.body__overlay {
   background: url("../img/body.png") no-repeat;
-  background-position: 50% 0%;
+  //background-position: 50% 0%;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  animation: 20s animatedBackground infinite linear alternate;
 }
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
 .wrapper {
   min-height: 100%;
   position: relative;
@@ -159,6 +171,7 @@ h3 {
   overflow: hidden;
   &:hover {
     background-color: $bg-color5;
+    border: 1px solid $bg-color5;
   }
 }
 
@@ -187,37 +200,47 @@ h3 {
     font-weight: 400;
   }
 }
-.advantages .advantages__svg{
+
+.advantages .advantages__svg {
   position: absolute;
   width: 53px;
   height: 48px;
   fill: $text-color3;
   margin-left: -90px;
 }
-.advantages .advantages__svg.active{
+
+.advantages .advantages__svg.active {
   fill: $text-color5;
 }
-li.nav-item:hover .advantages__svg{
-    fill: $text-color5;
+
+li.nav-item:hover .advantages__svg {
+  fill: $text-color5;
 }
-.advantages .nav-tabs .nav-item.show .nav-link{
+
+.advantages .nav-tabs .nav-item.show .nav-link {
   color: $text-color2;
   background: none;
   border: none;
 }
-.advantages .nav-tabs .nav-link{
+
+.advantages .nav-tabs .nav-link {
+  display: flex;
+  align-items: center;
   border: none;
   line-height: 20px;
   padding-left: 90px;
 }
-.advantages .nav-tabs .nav-link:hover{
+
+.advantages .nav-tabs .nav-link:hover {
   color: $text-color2;
 }
+
 .advantages .nav-tabs .nav-link.active {
   color: $text-color2;
   background: none;
   border: none;
 }
+
 .hotell {
   margin-top: 55px;
   margin-left: 90px;
@@ -233,7 +256,7 @@ li.nav-item:hover .advantages__svg{
 
 .tab__svg {
   display: flex;
-  .advantages__svg{
+  .advantages__svg {
     width: 82px;
     height: 77px;
     fill: $text-color5;
@@ -263,9 +286,11 @@ li.nav-item:hover .advantages__svg{
   max-width: 32%;
   //margin: 0 5px;
 }
-.column__center{
+
+.column__center {
   margin: 0 20px;
 }
+
 .num {
   padding: 63px 0;
 }
@@ -281,11 +306,13 @@ li.nav-item:hover .advantages__svg{
 .gallery figure:hover figcaption {
   opacity: 1;
 }
+
 .gallery figure:hover img {
   transform: scale(1.2);
   opacity: .5;
 }
-.gallery figcaption{
+
+.gallery figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,6 +328,7 @@ li.nav-item:hover .advantages__svg{
   opacity: 0;
   @include transition(.5s);
 }
+
 .column img {
   //max-width: 352px;
   height: 352px;

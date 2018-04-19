@@ -48,15 +48,15 @@ $(function () {
     $("#phone").mask("8(999) 999-9999");
 
     /*waypoint*/
-    //$('.header__bottom').waypoint(function(direction) {
+    $('.button-reserve').waypoint(function(direction) {
 
-     //   if (direction ==='down') {
-     //       $(".header__bottom").addClass('fix');
-     //   }
-      //  else {
-      //      $(".header__bottom").removeClass('fix');
-     //   }
-   // },{ offset: '0%' });
+        if (direction ==='down') {
+            $(".button-reserve").addClass('fix');
+        }
+        else {
+            $(".button-reserve").removeClass('fix');
+        }
+    },{ offset: '0%' });
 });
 
 /*slider*/
@@ -131,6 +131,7 @@ $(function () {
             }
         }
     });
+    $('.popup__link2').magnificPopup();
 });
 
 
