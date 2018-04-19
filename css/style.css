@@ -548,7 +548,7 @@ form {
 .sl .slick-dots {
   z-index: 1;
   bottom: 50%;
-  left: 11%;
+  left: 21%;
   width: 5%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -779,7 +779,9 @@ form {
   .book__room {
     height: 100%; }
   .sliders {
-    height: 900px; } }
+    height: 900px; }
+  .sl .slick-dots {
+    left: 11%; } }
 
 /*
 ================================================================================

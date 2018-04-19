@@ -368,7 +368,7 @@ form {
 .sl .slick-dots {
   z-index: 1;
   bottom: 50%;
-  left: 11%;
+  left: 21%;
   width: 5%;
   display: flex;
   justify-content: space-around;
@@ -655,5 +655,8 @@ form {
   }
   .sliders {
     height: 900px;
+  }
+  .sl .slick-dots {
+    left: 11%;
   }
 }
