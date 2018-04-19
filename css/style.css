@@ -173,12 +173,6 @@ button {
 .wrap__top {
   position: relative; }
 
-.wrap__top-about {
-  background: url("../img/slider-1.png") no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  height: 788px; }
-
 .header {
   position: fixed;
   top: 0;
@@ -191,15 +185,17 @@ button {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #8cb5d9;
+  background-color: #fff;
   z-index: 999; }
 
-.wrap__top__color .header {
-  background-color: #bdd1bf; }
-
-.wrap__top__color .panel {
-  background-color: #bdd1bf; }
-
+/*.wrap__top__color {
+  .header {
+    background-color: $bg-color8;
+  }
+  .panel{
+    background-color: $bg-color8;
+  }
+}*/
 .header__contacts {
   background-color: #fff; }
 
@@ -306,7 +302,7 @@ input[type="button"] {
   left: -90px;
   display: none;
   width: 816px;
-  background-color: #8cb5d9; }
+  background-color: #fff; }
 
 .menu li {
   position: relative; }
@@ -386,6 +382,69 @@ input[type="button"] {
   -o-transition: 0.5s;
   transition: 0.5s;
   z-index: 1; }
+  .header__bottom .departure img {
+    width: 21px;
+    height: 22px;
+    position: absolute;
+    bottom: 28%;
+    right: 12%; }
+  .header__bottom .bout img {
+    width: 21px;
+    height: 22px;
+    position: absolute;
+    bottom: 28%;
+    right: 12%; }
+  .header__bottom .form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    cursor: pointer; }
+    .header__bottom .form select:focus {
+      outline: none; }
+  .header__bottom form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .header__bottom form input, .header__bottom form select {
+      background-color: #fff;
+      width: 100%;
+      height: 47px;
+      border: none;
+      color: #757575;
+      font-size: 1.4rem;
+      padding: 16px; }
+  .header__bottom .form svg {
+    position: absolute;
+    bottom: 40%;
+    right: 12%;
+    width: 18px;
+    height: 9px; }
+  .header__bottom .submit {
+    background-color: #4caf50;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    .header__bottom .submit:hover {
+      background-color: #449c44; }
+
+.header__bottom {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.header__bottom_change {
+  position: relative;
+  margin-top: 84px; }
+
+.hide {
+  opacity: 0; }
 
 .button-reserve {
   opacity: 0;
@@ -535,7 +594,7 @@ form {
     background-color: #449c44; }
 
 .sl {
-  height: 788px;
+  height: 100vh;
   overflow: hidden; }
 
 .sl .sl__slider {
@@ -1572,7 +1631,7 @@ li.nav-item:hover .advantages__svg {
 ================================================================================
 */
 .standard__room {
-  margin-top: 120px;
+  margin-top: 20px;
   margin-bottom: -80px; }
 
 .room__standard {
@@ -1809,7 +1868,7 @@ li.nav-item:hover .advantages__svg {
     background-position: 50% 60%; } }
 
 .entertainment {
-  margin-top: 100px; }
+  margin-top: 10px; }
 
 .entertainment__services {
   padding-top: 70px;
@@ -1957,6 +2016,12 @@ li.nav-item:hover .advantages__svg {
   100% {
     background-position: 50% 30%; } }
 
+.wrap__top-about {
+  background: url("../img/slider-1.png") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh; }
+
 .about__us {
   margin-top: 60px; }
 
@@ -1984,7 +2049,7 @@ li.nav-item:hover .advantages__svg {
 ================================================================================
 */
 .treatment {
-  margin-top: 130px; }
+  margin-top: 30px; }
   .treatment img {
     width: 100%;
     height: auto; }
@@ -2041,6 +2106,14 @@ li.nav-item:hover .advantages__svg {
 |                                     404                                  |
 ================================================================================
 */
+.header__wrap_error {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .header__wrap_error .menu__item {
+    padding-left: 45px; }
+
 .oops__error {
   height: 780px; }
 
@@ -2083,6 +2156,19 @@ li.nav-item:hover .advantages__svg {
     font-size: 19rem; }
 
 .error__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   top: 60%;
   left: 50%;

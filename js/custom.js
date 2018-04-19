@@ -52,9 +52,11 @@ $(function () {
 
         if (direction ==='down') {
             $(".button-reserve").addClass('fix');
+            $(".header__bottom").addClass('hide');
         }
         else {
             $(".button-reserve").removeClass('fix');
+            $(".header__bottom").removeClass('hide');
         }
     },{ offset: '0%' });
 });
