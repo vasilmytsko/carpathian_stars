@@ -31,9 +31,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="header__wrap header__wrap_error">
-							<div class="button-reserve">
-								<a href="#popup2" class="popup__link2 reserve__link">Забронювати номер</a>
-							</div>
+                            <div class="header__wrap_group">
+                                <div class="logo">
+                                    <a href="index.html"><img src="img/logo_karpatski_zori.jpg" alt="" class="sl__img"></a>
+                                </div>
+                                <div class="button-reserve">
+                                    <a href="#popup2" class="popup__link2 reserve__link">Забронювати номер</a>
+                                </div>
+                            </div>
                             <nav class="menu">
                                 <ul class="menu__list">
                                     <li class="menu__item"><a href="index.html" class="menu__link ">Головна</a>
@@ -131,7 +136,8 @@
                                         </div>
                                     </li>
                                     <li class="menu__item"><a href="gallery.html" class="menu__link">Галерея</a></li>
-                                    <li class="menu__item"><a href="entertainment.html" class="menu__link">Розваги</a></li>
+                                    <li class="menu__item"><a href="entertainment.html" class="menu__link">Розваги</a>
+                                    </li>
                                     <li class="menu__item"><a href="rooms.html" class="menu__link">Номери</a></li>
                                     <li class="menu__item"><a href="contacts.html" class="menu__link">Контакти</a></li>
                                 </ul>
@@ -145,42 +151,42 @@
 
     </div>
     <!-- Modal -->
-	<div id="popup2" class="mfp-hide popup__box2">
-		<div class="form">
-			<form action="#">
-				<div class="form__colum">
-					<div class="form_control"><input type="text" placeholder="Ім'я" required></div>
-					<div class="form_control"><input id="phone" type="text" placeholder="Телефон"
-													 required>
-					</div>
-					<div class="form_control bout"><input type="text" id="datepicker" class="my-data"
-														  placeholder="Дата заїзду"></div>
-					<div class="form_control departure"><input type="text" id="datepicker2"
-															   class="my-data"
-															   placeholder="Дата виїзду"></div>
-					<div class="form_control"><select class="classic">
-						<option selected="selected">Тип номеру</option>
-						<option>Стандарт</option>
-						<option>Напів люкс</option>
-						<option>Люкс</option>
-					</select>
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
-							 xmlns:xlink="http://www.w3.org/1999/xlink"
-							 enable-background="new 0 0 129 129">
-							<g>
-								<path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
-							</g>
-						</svg>
-					</div>
-					<div class="form_control">
-						<div class="button-submit">
-							<input type="submit" value="Надіслати" class="submit">
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
+    <div id="popup2" class="mfp-hide popup__box2">
+        <div class="form">
+            <form action="#">
+                <div class="form__colum">
+                    <div class="form_control"><input type="text" placeholder="Ім'я" required></div>
+                    <div class="form_control"><input id="phone" type="text" placeholder="Телефон"
+                                                     required>
+                    </div>
+                    <div class="form_control bout"><input type="text" id="datepicker" class="my-data"
+                                                          placeholder="Дата заїзду"></div>
+                    <div class="form_control departure"><input type="text" id="datepicker2"
+                                                               class="my-data"
+                                                               placeholder="Дата виїзду"></div>
+                    <div class="form_control"><select class="classic">
+                        <option selected="selected">Тип номеру</option>
+                        <option>Стандарт</option>
+                        <option>Напів люкс</option>
+                        <option>Люкс</option>
+                    </select>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             enable-background="new 0 0 129 129">
+                            <g>
+                                <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="form_control">
+                        <div class="button-submit">
+                            <input type="submit" value="Надіслати" class="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <!--===========================  Room-1  =============================================-->
     <section class="oops__error">
         <div class="container">
@@ -188,13 +194,33 @@
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
-    .st1{fill:#ADDFFF;}
-    .st2{fill:#374953;}
-    .st3{fill:#E2413E;}
-    .st4{fill:#FFD800;}
-    .st5{fill:#00AC65;}
-    .st6{fill:#A4C639;}
+	.st0 {
+        fill: #FFFFFF;
+    }
+
+    .st1 {
+        fill: #ADDFFF;
+    }
+
+    .st2 {
+        fill: #374953;
+    }
+
+    .st3 {
+        fill: #E2413E;
+    }
+
+    .st4 {
+        fill: #FFD800;
+    }
+
+    .st5 {
+        fill: #00AC65;
+    }
+
+    .st6 {
+        fill: #A4C639;
+    }
 </style>
 <g id="Background">
 	<rect class="st0" width="500" height="500"/>
@@ -529,9 +555,6 @@
         </div>
     </section>
     <!--===========================  end Room-1  =========================================-->
-
-
-    <div class="empty"></div>
 </div>
 <!--===========================    Footer    ===========================================-->
 <footer class="footer">
@@ -541,12 +564,12 @@
                 <ul class="contact">
                     <li class="address"><a href="https://goo.gl/dVUcJR" target="_blank">м. Косів, вул. Над Гуком,
                         15.</a></li>
-					<li class="phone">
-						<a href="tel:+38(067)9731124" target="_blank"><span>+38 067 97 31 124</span></a>
-						<a href="tel:+38(067)3724622" target="_blank"><span>+38 067 37 24 622</span></a>
-						<a href="tel:+38(097)1990900" target="_blank"><span>+38 097 19 90 900</span></a>
-						<a href="tel:+38(097)9000700" target="_blank"><span>+38 097 90 00 700</span></a>
-					</li>
+                    <li class="phone">
+                        <a href="tel:+38(067)9731124" target="_blank"><span>+38 067 97 31 124</span></a>
+                        <a href="tel:+38(067)3724622" target="_blank"><span>+38 067 37 24 622</span></a>
+                        <a href="tel:+38(097)1990900" target="_blank"><span>+38 097 19 90 900</span></a>
+                        <a href="tel:+38(097)9000700" target="_blank"><span>+38 097 90 00 700</span></a>
+                    </li>
                     <li class="email"><a href="mailto:uakzori@gmail.com" target="_blank">uakzori@gmail.com.</a></li>
                 </ul>
             </div>

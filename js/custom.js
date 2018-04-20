@@ -29,6 +29,27 @@ $(function () {
         $(this).addClass("active");
     });
 
+    /* hamburger*/
+    $('.icon').click(function () {
+        $('.icon').toggleClass('active');
+        $('.menu').slideToggle(300);
+    });
+    $("ul .menu__item").click(function() {
+        $('.panel').slideToggle(800);
+    });
+
+    if ($(window).width() < 768) {
+        $(".menu__item:eq(2)").removeClass("menu__item_hover");
+    }else {
+        $(".menu__item:eq(2)").addClass("menu__item_hover");
+    }
+    /*tab*/
+    if ($(window).width() < 768) {
+        $(".my__tab").removeClass("tab-content");
+    }else {
+        $(".my__tab").addClass("tab-content");
+    }
+
 
     /*data*/
     $("#datepicker").datepicker({
@@ -48,9 +69,9 @@ $(function () {
     $("#phone").mask("8(999) 999-9999");
 
     /*waypoint*/
-    $('.button-reserve').waypoint(function(direction) {
+    $('.button-reserve').waypoint(function (direction) {
 
-        if (direction ==='down') {
+        if (direction === 'down') {
             $(".button-reserve").addClass('fix');
             $(".header__bottom").addClass('hide');
         }
@@ -58,7 +79,7 @@ $(function () {
             $(".button-reserve").removeClass('fix');
             $(".header__bottom").removeClass('hide');
         }
-    },{ offset: '0%' });
+    }, {offset: '0%'});
 });
 
 /*slider*/
@@ -110,7 +131,7 @@ $(function () {
         arrows: false
     });
 
-/*popup*/
+    /*popup*/
     $('.popup__link').magnificPopup({
         callbacks: {
             open: function () {
@@ -167,24 +188,24 @@ function initMap() {
             type: 'marker'
         }
     ];
-    features.forEach(function(feature) {
+    features.forEach(function (feature) {
         var marker = new google.maps.Marker({
             position: feature.position,
             icon: icons[feature.type].icon,
             map: map
         });
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<div id="bodyContent">'+
-            '<p>м. Косів, вул. Над Гуком, 15.</p>'+
-            '</div>'+
+        var contentString = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<div id="bodyContent">' +
+            '<p>м. Косів, вул. Над Гуком, 15.</p>' +
+            '</div>' +
             '</div>';
         var infowindow = new google.maps.InfoWindow({
             content: contentString
         });
 
-        marker.addListener('click', function() {
+        marker.addListener('click', function () {
             infowindow.open(map, marker);
         });
     });

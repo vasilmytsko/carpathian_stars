@@ -7,7 +7,6 @@
   position: relative;
 }
 
-
 .header {
   position: fixed;
   top: 0;
@@ -18,6 +17,7 @@
   background-color: $bg-color2;
   z-index: 999;
 }
+
 /*.wrap__top__color {
   .header {
     background-color: $bg-color8;
@@ -32,13 +32,77 @@
 
 .header__wrap {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   //height: 85px;
 }
 
+.header__wrap_group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 31%;
+}
+
 .content__box {
   position: relative;
+}
+
+.logo {
+  width: 90px;
+  height: 70px;
+  img {
+    width: 100%;
+  }
+
+}
+
+.icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 40px;
+  height: 5px;
+  background: $title-color2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background: $title-color2;
+  transition: .5s;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  top: 10px;
+}
+
+.icon.active .hamburger {
+  background: rgba(0, 0, 0, 0);
+}
+
+.icon.active .hamburger:before {
+  top: 9px;
+  transform: rotate(45deg);
+}
+
+.icon.active .hamburger::after {
+  transform: rotate(135deg);
 }
 
 .header__title {
@@ -71,29 +135,6 @@ input[type="button"] {
   }
 }
 
-.menu [type="checkbox"],
-.menu label.toggle__submenu {
-  display: none;
-}
-
-.menu label.toggle__menu {
-  display: none;
-  padding: 28px 40px;
-  cursor: pointer;
-  position: relative;
-}
-
-.menu label.toggle__menu .fa {
-  position: absolute;
-  top: 15px;
-  right: 12px;
-  font-size: 2.4rem;
-}
-
-.toggle__menu {
-  display: none;
-}
-
 .menu__list {
   display: flex;
   justify-content: flex-end;
@@ -102,6 +143,9 @@ input[type="button"] {
 
 .menu__item {
   padding-left: 30px;
+  &:first-child {
+    padding-left: 0;
+  }
 }
 
 .menu__link {
@@ -139,7 +183,7 @@ input[type="button"] {
   position: relative;
 }
 
-.menu__item:hover > .panel {
+.menu__item_hover:hover  .panel {
   display: block;
   margin: 0;
 }
@@ -216,7 +260,7 @@ input[type="button"] {
     bottom: 28%;
     right: 12%;
   }
-  .bout img{
+  .bout img {
     width: 21px;
     height: 22px;
     position: absolute;
@@ -261,24 +305,32 @@ input[type="button"] {
     }
   }
 }
+
 .header__bottom {
   opacity: 1;
   @include transition(.5s);
 }
-.header__bottom_change{
+
+.header__bottom_change {
   position: relative;
   margin-top: 84px;
 }
+
 .hide {
   opacity: 0;
+  z-index: -2;
 }
+
 .button-reserve {
   opacity: 0;
   @include transition(.5s);
+  position: relative;
+  z-index: -1;
 }
 
 .fix {
   opacity: 1;
+  z-index: 1;
 }
 
 .book__room {
@@ -314,10 +366,12 @@ input[type="button"] {
     color: $text-color;
   }
 }
-.popup__box2{
+
+.popup__box2 {
   width: 340px;
   margin: auto;
 }
+
 .form {
   width: 100%;
 }
@@ -361,9 +415,11 @@ form {
 .my-data {
   position: relative;
 }
-.form_control{
+
+.form_control {
   position: relative;
 }
+
 .departure img {
   width: 36px;
   height: 38px;
@@ -423,7 +479,7 @@ form {
 
 .sl .slick-dots {
   z-index: 1;
-  bottom: 50%;
+  bottom: 48%;
   left: 21%;
   width: 5%;
   display: flex;
@@ -469,16 +525,42 @@ form {
 }
 
 @media all and (max-width: 767px) {
-  .header {
-    background: #8db7db;
+  .header{
+    position: absolute;
   }
+  .header__wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo {
+    margin-top: 10px;
+  }
+  .icon {
+    display: flex;
+    position: absolute;
+    right: 4%;
+    top: 15px;
+  }
+  /*.logo {
+    position: absolute;
+    left: 4%;
+    top: 7%;
+  }*/
   .menu {
-    overflow: hidden;
+    //margin-top: 80px;
+    display: none;
     width: 100%;
+    margin-top: 30px;
   }
   .menu ul {
     display: block;
-    transition: max-height 0.3s;
+    //transition: max-height 0.3s;
+  }
+  .menu__item {
+    padding-left: 20px;
+    &:first-child {
+      padding-left: 20px;
+    }
   }
   .menu__link {
     font-size: 2rem;
@@ -497,113 +579,109 @@ form {
     font-size: 1.6rem;
     line-height: 16px;
   }
-  .panel {
+  .panel{
+    position: relative;
+    display: none;
     left: 0;
-    background-color: transparent;
   }
+   .sowed {
+    position: relative;
+    display: block;
+  }
+
   .list__children-2 {
     padding: 0;
     border-left: none;
     border-right: none;
   }
-  .menu .menu__list {
-    max-height: 0;
-  }
-  .menu li > ul li ul {
-    position: absolute;
-    right: auto;
-    top: auto;
-  }
-  .menu label.toggle__menu {
-    display: block;
-  }
-  .menu__item:hover > .panel {
+
+  /*.menu__item:hover > .panel {
     display: none;
-  }
-  input.toggle__menu:checked ~ ul,
-  input.toggle__submenu:checked ~ .panel {
-    display: block;
-    position: relative;
-    max-height: 5000px;
-    transition: max-height 2s ease-in;
-    z-index: 9999;
-  }
-  .menu label.toggle__submenu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    display: block;
-  }
-  input.toggleMenu:checked + label.toggle__menu {
-    color: $text-color;
-  }
-  input.toggle__submenu:hover ~ a {
-    color: $text-color;
-  }
-  input.toggle__submenu:checked ~ a {
-    color: $text-color;
-  }
-  .menu label.toggle__submenu .fa:before {
-    content: "\f0d7";
-    color: $text-color2;
-    padding: 0;
-  }
-  .menu label.toggle__submenu .fa {
-    position: absolute;
-    top: 10px;
-    right: 30px;
-    font-size: 20px;
-  }
-  .menu input.toggle__submenu:checked ~ label.toggle__submenu .fa::before {
-    content: "\f0d8";
-    color: $text-color;
-  }
+  }*/
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
+
+  .button-reserve {
+    display: none;
+  }
   .header__title {
-    top: 85px;
-    width: 100%;
+    top: 100px;
+    width: 67%;
     h1 {
-      font-size: 2rem;
-      text-align: center;
+      font-size: 2.4rem;
+      text-align: left;
       line-height: 25px;
       width: auto;
     }
     p {
-      display: none;
+      font-size: 1.2rem;
+      margin-top: 0;
     }
   }
   .header__bottom {
     background-color: transparent;
     height: 50%;
-    top: 33%;
+    top: 45%;
+    opacity: 1;
+    z-index: 1;
   }
   .book__room {
     height: 100%;
   }
   .form__title h3 {
-    text-align: center;
+    display: none;
   }
-  form input, form select {
-    margin-bottom: 20px;
+  .header__bottom form input, .header__bottom form select {
+    margin-bottom: 15px;
+    width: 190px;
+    height: 47px;
   }
-  .bout img, .departure img {
-    bottom: 50%;
+
+  .header__bottom .bout img{
+    bottom: 43%;
+    right: 22%;
   }
-  .form svg {
-    bottom: 58%;
+  .header__bottom .departure img{
+    bottom: 43%;
+    right: 22%;
+  }
+  .header__bottom .form svg{
+    bottom: 54%;
+    right: 23%;
   }
   .submit {
     border: 1px solid $bg-color2;
   }
   .sliders {
-    background-color: $bg-color3;
+    //background-color: $bg-color3;
   }
 
+  .sl .sl__img{
+    width:auto;
+  }
+  .sl .slick-dots{
+    bottom: 65%;
+    left: 4%;
+    width: 20%;
+  }
+  .sl .slick-dots li.slick-active {
+    width: 9px;
+    height: 9px;
+  }
+  .sl .slick-dots li.slick-active button {
+    width: 9px;
+    height: 9px;
+  }
+  .sl .slick-dots li {
+    width: 7px;
+    height: 7px;
+  }
+  .sl .slick-dots li button{
+    width: 7px;
+    height: 7px;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
