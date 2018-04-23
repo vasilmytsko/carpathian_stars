@@ -3,16 +3,18 @@
 |                                     404                                  |
 ================================================================================
 */
-.header__wrap_error{
+.header__wrap_error {
   justify-content: space-between;
-  .menu__item{
+  .menu__item {
     padding-left: 30px;
   }
 }
-.oops__error{
+
+.oops__error {
   height: 780px;
 }
-.error__overlay{
+
+.error__overlay {
   background: url("../img/room1bg.png") no-repeat;
   position: absolute;
   left: 0;
@@ -21,6 +23,7 @@
   height: 100%;
   animation: 30s animatedBackground404 infinite linear alternate;
 }
+
 @keyframes animatedBackground404 {
   0% {
     background-position: 50% 13%;
@@ -29,44 +32,48 @@
     background-position: 50% 100%;
   }
 }
-.error{
+
+.error {
   position: relative;
-  svg{
+  svg {
     position: relative;
     z-index: -1;
   }
 }
+
 .error__title {
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  h1{
+  h1 {
     font-size: 19rem;
   }
 }
-.error__content{
+
+.error__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top:60%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  p{
+  p {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 2.4rem;
     width: 200px;
     margin-bottom: 40px;
-    span{
+    span {
       display: block;
     }
   }
 }
-.error__link{
+
+.error__link {
   display: block;
   background-color: $bg-color3;
   color: $text-color;
@@ -78,4 +85,48 @@
     background-color: $bg-color5;
     color: $text-color;
   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .oops__error {
+    height: auto;
+  }
+  .error{
+    margin-top: 25%;
+  }
+  .error__title{
+    top:15%;
+  }
+  .error__title h1{
+    font-size: 5rem;
+  }
+  .error__content p{
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .oops__error {
+    height: auto;
+  }
+  .error{
+    margin-top: 15%;
+  }
+  .error__title{
+    top:20%;
+  }
+  .error__title h1{
+    font-size: 7rem;
+  }
+  .error__content p{
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
 }

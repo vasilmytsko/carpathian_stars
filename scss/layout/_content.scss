@@ -338,14 +338,14 @@ li.nav-item:hover .advantages__svg {
 
 }
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
   .column {
     flex: 50%;
     max-width: 50%;
   }
-}
+}*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -375,28 +375,29 @@ li.nav-item:hover .advantages__svg {
   .about {
     margin: 130px 0 30px 0;
   }
-  .about__content{
+  .about__content {
     padding-top: 60px;
   }
-  .about p{
+  .about p {
     font-size: 1.4rem;
   }
   .about__txt {
     width: 98%;
     margin: 0 auto;
+    margin-top: 20%;
   }
-  .about__link{
+  .about__link {
     padding: 40px 0 35px 0;
   }
   .about__link a {
     width: 80%;
     margin: auto;
   }
-  .about__img{
+  .about__img {
     left: -15px;
     top: -125px;
   }
-   .about__image {
+  .about__image {
     display: none;
   }
   .company {
@@ -426,24 +427,25 @@ li.nav-item:hover .advantages__svg {
     height: 42px;
 
   }
-  .tab__svg span{
-    font-size:4.3rem;
+  .tab__svg span {
+    font-size: 4.3rem;
     padding-left: 34px;
   }
   .column img {
-    max-width: 287px;
-    height: 270px;
+    min-width: 287px;
+    min-height: 270px;
+    width: 100%;
   }
-  .gallery figcaption{
+  .gallery figcaption {
     width: 149px;
     height: 118px;
     font-size: 1.4rem;
   }
-  .column{
+  .column {
     margin: auto;
   }
-  .column__center{
-    margin:0 auto;
+  .column__center {
+    margin: 0 auto;
   }
   .num {
     padding: 0;
@@ -453,76 +455,43 @@ li.nav-item:hover .advantages__svg {
       font-size: 2.2rem;
     }
   }
-  .kosiv{
+  .kosiv {
     padding: 0 0 30px 0;
   }
-  .kosiv__txt{
+  .kosiv__txt {
     font-size: 1.4rem;
     padding: 0;
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 575px) {
+
   .about {
-    margin: 70px 0;
+    margin: 130px 0 30px 0;
   }
+  .about__content {
+    padding-top: 60px;
+  }
+  .about p {
+    font-size: 1.4rem;
+  }
+
   .about__txt {
     width: 98%;
     margin: 0 auto;
+    margin-top: 28%;
+  }
+  .about__link {
+    padding: 40px 0 35px 0;
   }
   .about__link a {
-    width: 98%;
-    margin: 0;
-  }
-  .about__img, .about__image {
-    display: none;
-  }
-  .company {
-    padding-top: 0;
-  }
-  .company__title h2 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  .advantages {
-    margin: 10px;
-    li {
-      margin: 15px 0 70px 25px;
-    }
-  }
-  .hotell {
-    margin: 10px;
-    p {
-      width: 98%;
-      font-size: 1.8rem;
-    }
-  }
-  .rows {
-    display: flex;
-    justify-content: center;
-  }
-  .column img {
-    min-width: 0px;
-    height: auto;
-  }
-  .num {
-    padding: 0;
-  }
-  .kosiv__title {
-    text-align: center;
-    h2 {
-      font-size: 2rem;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .about {
-    margin: 90px 0;
+    width: 50%;
+    max-width: 270px;
+    margin: auto;
   }
   .about__img {
-    top: 70px;
-    right: 0px;
+    left: -15px;
+    top: -125px;
   }
   .about__image {
     display: none;
@@ -531,36 +500,282 @@ li.nav-item:hover .advantages__svg {
     padding-top: 0;
   }
   .company__title h2 {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     text-align: center;
   }
   .advantages {
-    margin: 10px;
-    li {
-      margin: 15px 0 70px 25px;
-    }
+    display: none;
   }
   .hotell {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    display: block;
+    margin: -10px;
+    margin-bottom: 30px;
+    opacity: 1;
     p {
-      width: 100%;
+      width: 98%;
+      font-size: 1.4rem;
+      line-height: 15px;
     }
   }
-  .rows {
-    display: flex;
-    justify-content: center;
+  .tab__svg .advantages__svg {
+    width: 44px;
+    height: 42px;
+
+  }
+  .tab__svg span {
+    font-size: 4.3rem;
+    padding-left: 34px;
+  }
+  .column img {
+    min-width: 287px;
+    min-height: 270px;
+    width: 100%;
+  }
+  .gallery figcaption {
+    width: 249px;
+    height: 230px;
+    font-size: 1.8rem;
   }
   .column {
-    flex: 30%;
-    max-width: 30%;
-    img {
-      min-width: 0;
-      height: 280px;
+    margin: auto;
+  }
+  .column__center {
+    margin: 0 auto;
+  }
+  .num {
+    padding: 0;
+  }
+  .kosiv__title {
+    h2 {
+      font-size: 2.2rem;
     }
   }
-  .kosiv__title h2 {
-    font-size: 3.2rem;
+  .kosiv {
+    padding: 0 0 30px 0;
+  }
+  .kosiv__txt {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .about {
+    margin: 130px 0 30px 0;
+  }
+  .about__content {
+    padding-top: 60px;
+  }
+  .about p {
+    font-size: 1.4rem;
+  }
+  .about__txt {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 40%;
+  }
+  .about__link {
+    padding: 40px 0 35px 0;
+  }
+  .about__link a {
+    width: 50%;
+    max-width: 270px;
+    margin: auto;
+  }
+  .about__img {
+    left: -15px;
+    top: -125px;
+  }
+  .about__image {
+    display: none;
+  }
+  .company {
+    padding-top: 0;
+  }
+  .company__title h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .hotell {
+    display: block;
+    margin: -10px;
+    margin-bottom: 30px;
+    opacity: 1;
+    p {
+      width: 98%;
+      font-size: 1.4rem;
+      line-height: 15px;
+    }
+  }
+  .advantages {
+    margin-right: 0;
+  }
+  .advantages li.nav-item {
+    margin: 0 0 50px 0;
+  }
+  .tab__panes {
+    display: flex;
+    align-items: center;
+  }
+  .advantages .advantages__svg {
+    width: 31px;
+    height: 33px;
+  }
+
+  .tab__svg .advantages__svg {
+    width: 58px;
+    height: 63px;
+
+  }
+  .tab__svg span {
+    font-size: 6.4rem;
+    padding-left: 50px;
+  }
+  .column img {
+    min-width: 730px;
+    min-height: 700px;
+    width: 100%;
+  }
+  .gallery figcaption {
+    width: 60%;
+    height: 50%;
+    max-width: 380px;
+    max-height: 300px;
+    font-size: 3rem;
+    padding: 0 55px;
+    text-align: left;
+  }
+  .column {
+    margin: auto;
+  }
+  .column__center {
+    margin: 0 auto;
+  }
+  .num {
+    padding: 0;
+  }
+  .kosiv__title {
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+  .kosiv {
+    padding: 0 0 30px 0;
+  }
+  .kosiv__txt {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .about {
+    margin: 130px 0 30px 0;
+  }
+  .about__content {
+    padding-top: 60px;
+  }
+  .about p {
+    font-size: 1.4rem;
+  }
+  .about__txt {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 40%;
+  }
+  .about__link {
+    padding: 40px 0 35px 0;
+  }
+  .about__link a {
+    width: 50%;
+    max-width: 270px;
+    margin: auto;
+  }
+  .about__img {
+    left: -15px;
+    top: -125px;
+  }
+  .about__image {
+    display: none;
+  }
+  .company {
+    padding-top: 0;
+  }
+  .company__title h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .hotell {
+    display: block;
+    margin: -10px;
+    margin-bottom: 30px;
+    opacity: 1;
+    p {
+      width: 98%;
+      font-size: 1.4rem;
+      line-height: 15px;
+    }
+  }
+  .advantages {
+    margin-right: 0;
+  }
+  .advantages li.nav-item {
+    margin: 0 0 50px 0;
+  }
+  .tab__panes {
+    display: flex;
+    align-items: center;
+  }
+  .advantages .advantages__svg {
+    width: 31px;
+    height: 33px;
+  }
+
+  .tab__svg .advantages__svg {
+    width: 58px;
+    height: 63px;
+
+  }
+  .tab__svg span {
+    font-size: 6.4rem;
+    padding-left: 50px;
+  }
+  .column img {
+    min-width: 730px;
+    min-height: 700px;
+    width: 100%;
+  }
+  .gallery figcaption {
+    width: 60%;
+    height: 50%;
+    max-width: 380px;
+    max-height: 300px;
+    font-size: 3rem;
+    padding: 0 55px;
+    text-align: left;
+  }
+  .column {
+    margin: auto;
+  }
+  .column__center {
+    margin: 0 auto;
+  }
+  .num {
+    padding: 0;
+  }
+  .kosiv__title {
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+  .kosiv {
+    padding: 0 0 30px 0;
+  }
+  .kosiv__txt {
+    font-size: 1.4rem;
+    padding: 0;
   }
 }
 

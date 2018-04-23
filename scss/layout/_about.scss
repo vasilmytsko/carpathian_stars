@@ -47,3 +47,39 @@
   height: 788px;
   overflow: hidden;
 }
+
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+.about__us-title{
+  width: 100%;
+  p{
+    font-size: 1.4rem;
+  }
+}
+  .sl__entertainment .slick-dots{
+    width: 70%;
+
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .about__us-title{
+    width: 100%;
+    p{
+      font-size: 1.4rem;
+      margin-top: -10px;
+    }
+  }
+  .sl__entertainment .slick-dots{
+    width: 40%;
+
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+}

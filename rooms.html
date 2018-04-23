@@ -31,21 +31,23 @@
                 <div class="row">
                     <div class="col">
                         <div class="header__wrap">
-                            <div class="logo">
-                                <a href="index.html"><img src="img/logo_karpatski_zori.jpg" alt="" class="sl__img"></a>
-                            </div>
-                            <div class="button-reserve">
-                                <a href="#popup2" class="popup__link2 reserve__link">Забронювати номер</a>
+                            <div class="header__wrap_group">
+                                <div class="logo">
+                                    <a href="index.html"><img src="img/logo_karpatski_zori.jpg" alt="" class="sl__img"></a>
+                                </div>
+                                <div class="button-reserve">
+                                    <a href="#popup2" class="popup__link2 reserve__link">Забронювати номер</a>
+                                </div>
+                                <div class="icon">
+                                    <div class="hamburger"></div>
+                                </div>
                             </div>
                             <nav class="menu">
                                 <ul class="menu__list">
                                     <li class="menu__item"><a href="index.html" class="menu__link ">Головна</a>
                                     </li>
                                     <li class="menu__item"><a href="#" class="menu__link">Про нас</a></li>
-                                    <li class="menu__item">
-                                        <input type="checkbox" name="toggle" class="toggle__submenu" id="sub_m1">
-                                        <a href="#" class="menu__link">Лікування</a>
-                                        <label for="sub_m1" class="toggle__submenu"><i class="fa"></i></label>
+                                    <li class="menu__item"><a href="#" class="menu__link">Лікування</a>
                                         <div class="panel">
                                             <ul>
                                                 <li class="has-children"><span>Види лікування</span>
@@ -218,12 +220,12 @@
             <form action="#">
                 <div class="form__colum">
                     <div class="form_control"><input type="text" placeholder="Ім'я" required></div>
-                    <div class="form_control"><input id="phone" type="text" placeholder="Телефон"
+                    <div class="form_control"><input id="phone_up" type="text" placeholder="Телефон"
                                                      required>
                     </div>
-                    <div class="form_control bout"><input type="text" id="datepicker" class="my-data"
+                    <div class="form_control bout"><input type="text" id="datepicker_up" class="my-data"
                                                           placeholder="Дата заїзду"></div>
-                    <div class="form_control departure"><input type="text" id="datepicker2"
+                    <div class="form_control departure"><input type="text" id="datepicker2_up"
                                                                class="my-data"
                                                                placeholder="Дата виїзду"></div>
                     <div class="form_control"><select class="classic">
@@ -286,7 +288,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row footer__box">
-            <div class="col-md">
+            <div class="col-md col-sm-4">
                 <ul class="contact">
                     <li class="address"><a href="https://goo.gl/dVUcJR" target="_blank">м. Косів, вул. Над Гуком,
                         15.</a></li>
@@ -299,7 +301,7 @@
                     <li class="email"><a href="mailto:uakzori@gmail.com" target="_blank">uakzori@gmail.com.</a></li>
                 </ul>
             </div>
-            <div class="col-md">
+            <div class="col-md col-sm-4">
                 <div class="footer__menu">
                     <ul>
                         <li><a href="index.html">Головна</a></li>
@@ -314,7 +316,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-md col-sm-4">
                 <div class="btn__begin" data-toggle="modal"
                      data-target="#myModal">
                     <a href="#popup2" class="popup__link2 ">Почати відпочинок</a>

@@ -44,7 +44,7 @@ $(function () {
         $(".menu__item:eq(2)").addClass("menu__item_hover");
     }
     /*tab*/
-    if ($(window).width() < 768) {
+    if ($(window).width() < 575) {
         $(".my__tab").removeClass("tab-content");
     }else {
         $(".my__tab").addClass("tab-content");
@@ -64,9 +64,22 @@ $(function () {
         buttonImageOnly: true,
         buttonText: "Select date"
     });
+    $("#datepicker_up").datepicker({
+        showOn: "button",
+        buttonImage: "img/calendar.svg",
+        buttonImageOnly: true,
+        buttonText: "Select date"
+    });
+    $("#datepicker2_up").datepicker({
+        showOn: "button",
+        buttonImage: "img/calendar.svg",
+        buttonImageOnly: true,
+        buttonText: "Select date"
+    });
 
     /* phone mask*/
     $("#phone").mask("8(999) 999-9999");
+    $("#phone_up").mask("8(999) 999-9999");
 
     /*waypoint*/
     $('.button-reserve').waypoint(function (direction) {
@@ -91,7 +104,16 @@ $(function () {
         arrows: false,
         speed: 3000,
         fade: true,
-        pauseOnDotsHover: true
+        pauseOnDotsHover: true,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     }).on("afterChange", function (e, slick) {
         if (slick.currentSlide === 0) {
             $('.sl').slick("setOption", "autoplaySpeed", 2000);
@@ -118,17 +140,33 @@ $(function () {
         fade: true
     });
     $('.sl__standard').slick({
-        dots: true,
+        dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         fade: true
     });
     $('.sl__entertainment').slick({
         dots: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     /*popup*/

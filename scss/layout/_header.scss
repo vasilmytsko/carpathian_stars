@@ -65,6 +65,7 @@
 }
 
 .hamburger {
+  display: none;
   width: 40px;
   height: 5px;
   background: $title-color2;
@@ -526,7 +527,7 @@ form {
 
 @media all and (max-width: 767px) {
   .header{
-    position: absolute;
+    //position: absolute;
   }
   .header__wrap {
     flex-direction: column;
@@ -540,6 +541,9 @@ form {
     position: absolute;
     right: 4%;
     top: 15px;
+  }
+  .hamburger{
+    display: flex;
   }
   /*.logo {
     position: absolute;
@@ -608,7 +612,7 @@ form {
   }
   .header__title {
     top: 100px;
-    width: 67%;
+    width: 182px;
     h1 {
       font-size: 2.4rem;
       text-align: left;
@@ -630,32 +634,36 @@ form {
   .book__room {
     height: 100%;
   }
+  .form{
+    width: 190px;
+  }
   .form__title h3 {
     display: none;
   }
+
   .header__bottom form input, .header__bottom form select {
     margin-bottom: 15px;
     width: 190px;
     height: 47px;
+    position: relative;
   }
 
   .header__bottom .bout img{
     bottom: 43%;
-    right: 22%;
+    right: 11%;
   }
   .header__bottom .departure img{
     bottom: 43%;
-    right: 22%;
+    right: 11%;
   }
   .header__bottom .form svg{
-    bottom: 54%;
-    right: 23%;
+    bottom: 43%;
+    right: 11%;
+    width: 21px;
+    height: 22px;
   }
   .submit {
     border: 1px solid $bg-color2;
-  }
-  .sliders {
-    //background-color: $bg-color3;
   }
 
   .sl .sl__img{
@@ -664,7 +672,7 @@ form {
   .sl .slick-dots{
     bottom: 65%;
     left: 4%;
-    width: 20%;
+    width: 70px;
   }
   .sl .slick-dots li.slick-active {
     width: 9px;
@@ -685,45 +693,96 @@ form {
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .container{
+    max-width: 710px;
+  }
+  .button-reserve {
+    display: none;
+  }
   .header__title {
-    top: 150px;
-    width: 100%;
+    top: 100px;
+    width: 182px;
     h1 {
-      font-size: 3rem;
-      text-align: center;
+      font-size: 2.4rem;
+      text-align: left;
       line-height: 25px;
       width: auto;
     }
     p {
-      display: none;
+      font-size: 1.2rem;
+      margin-top: 0;
     }
   }
   .header__bottom {
     background-color: transparent;
-    height: 50%;
-    top: 45%;
+    height: auto;
+    top: 22%;
+    opacity: 1;
+    z-index: 1;
   }
   .book__room {
     height: 100%;
+    align-items: flex-end;
+  }
+  .form{
+    width: 67%;
+    max-width: 330px;
   }
   .form__title h3 {
-    text-align: center;
+    display: none;
   }
-  form input, form select {
-    margin-bottom: 20px;
+
+  .header__bottom form input, .header__bottom form select {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 82px;
+    position: relative;
+    font-size:2.4rem;
   }
-  .bout img, .departure img {
-    bottom: 50%;
+
+  .header__bottom .bout img,
+  .header__bottom .departure img {
+    width: 36px;
+    height: 38px;
+    position: absolute;
+    right: 9%;
+    bottom: 32%;
+    z-index: 2;
   }
-  .form svg {
-    bottom: 58%;
+  .header__bottom .form svg{
+    bottom: 43%;
+    right: 11%;
+    width: 21px;
+    height: 22px;
   }
   .submit {
     border: 1px solid $bg-color2;
   }
-  .sliders {
-    background-color: $bg-color3;
-    height: 970px;
+
+  .sl .sl__img{
+    width:auto;
+  }
+  .sl .slick-dots{
+    bottom: 65%;
+    left: 4%;
+    width: 70px;
+    z-index: 5;
+  }
+  .sl .slick-dots li.slick-active {
+    width: 9px;
+    height: 9px;
+  }
+  .sl .slick-dots li.slick-active button {
+    width: 9px;
+    height: 9px;
+  }
+  .sl .slick-dots li {
+    width: 7px;
+    height: 7px;
+  }
+  .sl .slick-dots li button{
+    width: 7px;
+    height: 7px;
   }
 }
 

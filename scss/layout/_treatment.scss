@@ -13,7 +13,40 @@
   .treatment__text{
     padding: 70px 20px;
     color: $text-color2;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 22px;
   }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .header__bottom_change form input,
+  .header__bottom_change form select{
+    border: 1px solid $bg-color3;
+  }
+  .header__bottom_change .submit{
+    border: none;
+  }
+  .treatment .treatment__text{
+    font-size:1.8rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .header__bottom_change form input,
+  .header__bottom_change form select{
+    border: 1px solid $bg-color3;
+  }
+  .header__bottom_change .submit{
+    border: none;
+  }
+  .header__bottom_change .book__room{
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
 }

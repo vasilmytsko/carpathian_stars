@@ -38,6 +38,12 @@
   font-size: 1.8rem;
   font-weight: 700;
 }
+.sm_show{
+  display: none;
+}
+.sm_hiden{
+  display: block;
+}
 /*
 .modal__gallery{
   .modal-content{
@@ -64,8 +70,9 @@
   }
 }
 .sl__gallery{
-  width: 700px;
-  height: 600px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 600px;
   margin: auto;
 }
 
@@ -89,4 +96,25 @@
   content: '\f104';
   font-size: 9rem;
   margin-left: -560px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .sm_show{
+    display: block;
+  }
+  .sm_hiden{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
 }
