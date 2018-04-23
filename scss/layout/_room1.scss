@@ -128,6 +128,7 @@
     margin-left: 0;
   }
   .box__text {
+    padding-left: 0;
     h3 {
       font-size: 2.4rem;
     }
@@ -145,6 +146,7 @@
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .box__text {
+    padding-left: 0;
     h3 {
       font-size: 2.4rem;
     }

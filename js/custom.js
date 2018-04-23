@@ -140,11 +140,22 @@ $(function () {
         fade: true
     });
     $('.sl__standard').slick({
-        dots: false,
+        dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
-        fade: true
+        arrows: false,
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    dots: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true
+                }
+            }
+        ]
     });
     $('.sl__entertainment').slick({
         dots: true,

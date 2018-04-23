@@ -2128,24 +2128,28 @@ li.nav-item:hover .advantages__svg {
   .sl__standard .slick-slide img {
     width: 100%;
     margin-left: 0; }
-  .box__text h3 {
-    font-size: 2.4rem; }
-  .box__text p {
-    font-size: 1.8rem; }
-  .box__text span {
-    font-size: 2rem; }
-  .box__text li {
-    font-size: 1.8rem; } }
+  .box__text {
+    padding-left: 0; }
+    .box__text h3 {
+      font-size: 2.4rem; }
+    .box__text p {
+      font-size: 1.8rem; }
+    .box__text span {
+      font-size: 2rem; }
+    .box__text li {
+      font-size: 1.8rem; } }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .box__text h3 {
-    font-size: 2.4rem; }
-  .box__text p {
-    font-size: 1.8rem; }
-  .box__text span {
-    font-size: 2rem; }
-  .box__text li {
-    font-size: 1.8rem; } }
+  .box__text {
+    padding-left: 0; }
+    .box__text h3 {
+      font-size: 2.4rem; }
+    .box__text p {
+      font-size: 1.8rem; }
+    .box__text span {
+      font-size: 2rem; }
+    .box__text li {
+      font-size: 1.8rem; } }
 
 /*
 ================================================================================
