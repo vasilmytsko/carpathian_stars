@@ -3,15 +3,16 @@
 |                                   About                                  |
 ================================================================================
 */
-.about__overlay{
-    background: url("../img/aboutbg.png") no-repeat;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    animation: 10s animatedBackgroundAbout infinite linear alternate;
+.about__overlay {
+  background: url("../img/aboutbg.png") no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: 10s animatedBackgroundAbout infinite linear alternate;
 }
+
 @keyframes animatedBackgroundAbout {
   0% {
     background-position: 50% 0%;
@@ -20,14 +21,17 @@
     background-position: 50% 30%;
   }
 }
+
 .wrap__top-about {
   background: url('../img/slider-1.png') no-repeat;
   background-size: cover;
   height: 100vh;
 }
-.about__us{
+
+.about__us {
   margin-top: 60px;
 }
+
 .about__us-title {
   position: absolute;
   width: 45.1%;
@@ -43,41 +47,62 @@
     margin-top: 25px
   }
 }
-.sl__about{
+
+.sl__about {
   height: 788px;
   overflow: hidden;
 }
 
-
 @media screen and (min-width: 320px) and (max-width: 479px) {
-.about__us-title{
-  width: 100%;
-  p{
-    font-size: 1.4rem;
+  .wrap__top-about {
+    height: 740px;
   }
-}
-  .sl__entertainment .slick-dots{
+  .about__us-title {
+    width: 100%;
+    p {
+      font-size: 1.4rem;
+    }
+  }
+  .sl__entertainment .slick-dots {
     width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
 
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .about__us-title{
+  .wrap__top-about {
+    height: 740px;
+  }
+  .about__us-title {
     width: 100%;
-    p{
+    top: 90px;
+    p {
       font-size: 1.4rem;
-      margin-top: -10px;
+      margin-top: 10px;
     }
   }
-  .sl__entertainment .slick-dots{
+  .sl__entertainment .slick-dots {
     width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
 
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
+  .wrap__top-about {
+    height: 740px;
+  }
+  .sl__entertainment h3{
+    font-size: 1.2rem;
+    line-height: 14px;
+    padding-bottom: 10px;
+  }
+  .sl__entertainment .entertainment__text{
+    font-size:1rem;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {

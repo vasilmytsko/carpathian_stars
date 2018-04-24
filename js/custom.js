@@ -1,4 +1,27 @@
 $(function () {
+    /*menu*/
+    var h_hght = 0; // высота шапки
+    var h_mrg = 0;    // отступ когда шапка уже не видна
+
+
+
+        var elem = $('.header');
+        var top = $(this).scrollTop();
+
+        if(top > h_hght){
+            elem.css('top', h_mrg);
+        }
+
+        $(window).scroll(function(){
+            top = $(this).scrollTop();
+
+            if (top+h_mrg < h_hght) {
+                elem.css('top', (h_hght-top));
+            } else {
+                elem.css('top', h_mrg);
+            }
+        });
+
 
     /*preloader*/
     setTimeout(function () {
@@ -28,27 +51,41 @@ $(function () {
         $('li .nav-link .advantages__svg').removeClass("active");
         $(this).addClass("active");
     });
+    $('.nav_item_a').click(function () {
+        $('li .nav-link .advantages__svg').removeClass("active");
+        $(this).addClass("active");
+    });
 
     /* hamburger*/
     $('.icon').click(function () {
-        $('.icon').toggleClass('active');
+        /*$('.icon').toggleClass('active');*/
         $('.menu').slideToggle(300);
     });
-    $("ul .menu__item").click(function() {
+    $("ul .menu__item_toggle").click(function() {
         $('.panel').slideToggle(800);
     });
 
-    if ($(window).width() < 768) {
-        $(".menu__item:eq(2)").removeClass("menu__item_hover");
-    }else {
-        $(".menu__item:eq(2)").addClass("menu__item_hover");
-    }
+    $(window).bind("resize",function(){
+        if ($(window).width() < 991) {
+            $(".menu__item:eq(2)").removeClass("menu__item_hover");
+        }else {
+            $(".menu__item:eq(2)").addClass("menu__item_hover");
+        }
+    }).resize();
+
+
     /*tab*/
-    if ($(window).width() < 575) {
-        $(".my__tab").removeClass("tab-content");
-    }else {
-        $(".my__tab").addClass("tab-content");
-    }
+
+    $(window).bind("resize",function(){
+        if($(window).width() < 575){
+            $('.my__tab').removeClass('tab-content');
+        }
+        else{
+            $('.my__tab').addClass('tab-content');
+        }
+    }).resize();
+
+
 
 
     /*data*/
@@ -147,7 +184,7 @@ $(function () {
         fade: true,
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 600,
                 settings: {
                     dots: false,
                     slidesToShow: 1,

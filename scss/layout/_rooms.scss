@@ -115,9 +115,32 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
+  .content__top .header__title{
+    margin-top: -300px;
+    span{
+      font-size:2.9rem;
+      margin-left: 0;
+    }
+  }
+  .rooms figure{
+    margin-bottom: 50px;
+  }
+  .sl__rooms .sl__img{
+    width:auto;
+  }
+  .rooms .column{
+    max-width: 30%;
+  }
+  .rooms{
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-
+  .rooms .column{
+    max-width: 31%;
+  }
+  .rooms{
+    margin-bottom: 0;
+  }
 }
