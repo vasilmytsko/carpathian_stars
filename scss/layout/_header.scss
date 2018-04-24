@@ -176,7 +176,7 @@ input[type="button"] {
   position: relative;
 }
 
-.menu__item_hover:hover  .panel {
+.menu__item_hover:hover .panel {
   display: block;
   margin: 0;
 }
@@ -360,9 +360,26 @@ input[type="button"] {
   }
 }
 
-.popup__box2 {
+.popup_form {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  right: 0;
   width: 340px;
   margin: auto;
+  z-index: 99999;
+}
+
+.bg_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
 }
 
 .form {
@@ -518,7 +535,7 @@ form {
 }
 
 @media all and (max-width: 991px) {
-  .header{
+  .header {
     //position: absolute;
   }
   .header__wrap {
@@ -534,7 +551,7 @@ form {
     right: 4%;
     top: 15px;
   }
-  .hamburger{
+  .hamburger {
     display: flex;
   }
   /*.logo {
@@ -577,13 +594,13 @@ form {
     font-size: 1.6rem;
     line-height: 16px;
   }
-  .panel{
+  .panel {
     position: relative;
     display: none;
     left: 0;
     width: 100%;
   }
-   .sowed {
+  .sowed {
     position: relative;
     display: block;
   }
@@ -602,7 +619,15 @@ form {
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .button-reserve {
-    display: none;
+    margin-right: 20%;
+  }
+  .reserve__link {
+    padding: 15px 10px;
+    font-size: 1rem;
+  }
+
+  .header__wrap_group {
+    width: 80%;
   }
   .header__title {
     top: 100px;
@@ -618,7 +643,7 @@ form {
       margin-top: 0;
     }
   }
-  .hide__txt{
+  .hide__txt {
     display: none;
   }
   .header__bottom {
@@ -626,18 +651,22 @@ form {
     height: 50%;
     top: 45%;
     opacity: 1;
-    z-index: 1;
+    //z-index: 1;
   }
   .book__room {
     height: 100%;
   }
-  .form{
-    width: 190px;
+  .form {
+    // width: 190px;
   }
   .form__title h3 {
     display: none;
   }
-
+  .form__input {
+    position: relative;
+    width: 190px;
+    margin: auto;
+  }
   .header__bottom form input, .header__bottom form select {
     margin-bottom: 15px;
     width: 190px;
@@ -645,31 +674,65 @@ form {
     position: relative;
   }
 
-  .header__bottom .bout img{
+  .header__bottom .bout img {
     bottom: 43%;
-    right: 11%;
+    right: 7%;
   }
-  .header__bottom .departure img{
+  .header__bottom .departure img {
     bottom: 43%;
-    right: 11%;
+    right: 7%;
   }
-  .header__bottom .form svg{
+  .header__bottom .form svg {
     bottom: 43%;
-    right: 11%;
+    right: 7%;
     width: 21px;
     height: 22px;
   }
   .submit {
-    border: 1px solid $bg-color2;
+    border: 1px solid $bg-color3;
   }
-  .sl{
+  .popup_form{
+    width: 190px;
+    .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto;
+    }
+    form input, form select {
+      margin-bottom: 15px;
+      width: 190px;
+      height: 47px;
+      position: relative;
+      font-size: 1.4rem;
+    }
+
+    .bout img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%;
+    }
+    .departure img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%;
+    }
+    .form svg {
+      bottom: 43%;
+      right: 7%;
+      width: 21px;
+      height: 22px;
+    }
+  }
+  .sl {
     height: auto;
     overflow: visible;
   }
-  .sl .sl__img{
-    width:auto;
+  .sl .sl__img {
+    width: auto;
   }
-  .sl .slick-dots{
+  .sl .slick-dots {
     bottom: 65%;
     left: 4%;
     width: 70px;
@@ -686,18 +749,40 @@ form {
     width: 7px;
     height: 7px;
   }
-  .sl .slick-dots li button{
+  .sl .slick-dots li button {
     width: 7px;
     height: 7px;
   }
 }
 
+/*@media screen and (max-width: 568px) and (min-width: 320px){
+  .popup_form {
+    width: 190px;
+    .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto;
+    }
+    form input, form select {
+      margin-bottom: 15px;
+      padding: 10px;
+      width: 190px;
+      height: 35px;
+      position: relative;
+      font-size: 1.4rem;
+    }
+  }
+}*/
+
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .container{
+  .container {
     max-width: 710px;
   }
+  .header__wrap_group {
+    width: 80%;
+  }
   .button-reserve {
-    display: none;
+    margin-right: 20%;
   }
   .header__title {
     top: 100px;
@@ -713,7 +798,7 @@ form {
       margin-top: 0;
     }
   }
-  .hide__txt{
+  .hide__txt {
     display: none;
   }
   .header__bottom {
@@ -721,17 +806,18 @@ form {
     height: auto;
     top: 20%;
     opacity: 1;
-    z-index: 1;
+    //z-index: 1;
   }
-  .header__bottom_change{
+
+  .header__bottom_change {
     margin-top: 15%;
   }
   .book__room {
     height: 100%;
     align-items: flex-end;
   }
-  .form{
-    width: 67%;
+  .form {
+    //width: 67%;
     max-width: 330px;
   }
   .form__title h3 {
@@ -743,7 +829,7 @@ form {
     width: 100%;
     height: 82px;
     position: relative;
-    font-size:2.4rem;
+    font-size: 2.4rem;
   }
 
   .header__bottom .bout img,
@@ -755,24 +841,58 @@ form {
     bottom: 32%;
     z-index: 2;
   }
-  .header__bottom .form svg{
+  .header__bottom .form svg {
     bottom: 43%;
     right: 11%;
     width: 21px;
     height: 22px;
   }
   .submit {
-    border: 1px solid $bg-color2;
+    border: 1px solid $bg-color3;
   }
-  .sl{
+  .popup_form{
+    width: 190px;
+    .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto;
+    }
+    form input, form select {
+      margin-bottom: 10px;
+      width: 190px;
+      height: 47px;
+      position: relative;
+      font-size: 1.4rem;
+    }
+
+    .bout img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%;
+    }
+    .departure img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%;
+    }
+    .form svg {
+      bottom: 43%;
+      right: 7%;
+      width: 21px;
+      height: 22px;
+    }
+  }
+  .sl {
     height: auto;
     overflow: visible;
     padding: 0;
   }
-  .sl .sl__img{
-    width:auto;
+  .sl .sl__img {
+    width: auto;
   }
-  .sl .slick-dots{
+  .sl .slick-dots {
     bottom: 65%;
     left: 4%;
     width: 70px;
@@ -790,16 +910,18 @@ form {
     width: 7px;
     height: 7px;
   }
-  .sl .slick-dots li button{
+  .sl .slick-dots li button {
     width: 7px;
     height: 7px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
+  .header__wrap_group {
+    width: 80%;
+  }
   .button-reserve {
-    display: none;
+    margin-right: 20%;
   }
   .header__title {
     top: 100px;
@@ -820,17 +942,17 @@ form {
     height: auto;
     top: 20%;
     opacity: 1;
-    z-index: 1;
+    //z-index: 1;
   }
-  .header__bottom_change{
+  .header__bottom_change {
     margin-top: 15%;
   }
   .book__room {
     height: 100%;
     align-items: flex-end;
   }
-  .form{
-    width: 67%;
+  .form {
+    //width: 67%;
     max-width: 330px;
   }
   .form__title h3 {
@@ -842,7 +964,7 @@ form {
     width: 100%;
     height: 82px;
     position: relative;
-    font-size:2.4rem;
+    font-size: 2.4rem;
   }
 
   .header__bottom .bout img,
@@ -854,24 +976,25 @@ form {
     bottom: 32%;
     z-index: 2;
   }
-  .header__bottom .form svg{
+  .header__bottom .form svg {
     bottom: 43%;
     right: 11%;
     width: 21px;
     height: 22px;
   }
   .submit {
-    border: 1px solid $bg-color2;
+    border: 1px solid $bg-color3;
   }
-  .sl{
+
+  .sl {
     height: auto;
     overflow: visible;
     padding: 0;
   }
-  .sl .sl__img{
-    width:auto;
+  .sl .sl__img {
+    width: auto;
   }
-  .sl .slick-dots{
+  .sl .slick-dots {
     bottom: 65%;
     left: 15%;
     width: 70px;
@@ -889,29 +1012,29 @@ form {
     width: 7px;
     height: 7px;
   }
-  .sl .slick-dots li button{
+  .sl .slick-dots li button {
     width: 7px;
     height: 7px;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  .header__title{
+  .header__title {
     top: 110px;
   }
-  .menu__item:nth-child(2){
+  .menu__item:nth-child(2) {
     width: 101px;
   }
-  .menu__link{
+  .menu__link {
 
   }
   .header__title {
     left: 50px;
   }
-  .menu__item{
+  .menu__item {
     padding-left: 15px;
   }
-  .menu__link{
+  .menu__link {
     font-size: 1.6rem;
   }
   .header__bottom {
@@ -934,30 +1057,31 @@ form {
   .sliders {
     height: 768px;
   }
-  .sl{
+  .sl {
     height: auto;
   }
   .sl .sl__img {
     width: 100%;
     height: 768px;
   }
-  .sl .slick-dots{
+  .sl .slick-dots {
     left: 10%;
     bottom: 40%;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1366px){
-  .sl{
+
+@media screen and (min-width: 1200px) and (max-width: 1366px) {
+  .sl {
     height: auto;
   }
-  .hide__txt{
+  .hide__txt {
     display: block;
   }
   .header__bottom {
     height: auto;
     bottom: 0%;
   }
-  .sl .slick-dots{
+  .sl .slick-dots {
     left: 10%;
     bottom: 40%;
   }

@@ -36,12 +36,38 @@
     width: 100%;
   }
 }
+.contact__link {
+  display: none;
+  position: absolute;
+  bottom:25px;
+  padding: 40px 0 85px 0;
+}
+
+.contact__link a {
+  display: block;
+  width: 150px;
+  background-color: $bg-color3;
+  padding: 15px 40px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: $text-color;
+  overflow: hidden;
+  &:hover {
+    background-color: $bg-color5;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px){
+  .contact__link{
+    display: block;
+  }
   .contacts__addres{
     display: none;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px){
+  .contact__link{
+    display: block;
+  }
   .contacts__addres{
     display: none;
   }

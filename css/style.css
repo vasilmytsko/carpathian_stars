@@ -548,9 +548,25 @@ input[type="button"] {
     background-color: #449c44;
     color: #fff; }
 
-.popup__box2 {
+.popup_form {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  right: 0;
   width: 340px;
-  margin: auto; }
+  margin: auto;
+  z-index: 99999; }
+
+.bg_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; }
 
 .form {
   width: 100%; }
@@ -781,7 +797,12 @@ form {
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .button-reserve {
-    display: none; }
+    margin-right: 20%; }
+  .reserve__link {
+    padding: 15px 10px;
+    font-size: 1rem; }
+  .header__wrap_group {
+    width: 80%; }
   .header__title {
     top: 100px;
     width: 182px; }
@@ -799,14 +820,15 @@ form {
     background-color: transparent;
     height: 50%;
     top: 45%;
-    opacity: 1;
-    z-index: 1; }
+    opacity: 1; }
   .book__room {
     height: 100%; }
-  .form {
-    width: 190px; }
   .form__title h3 {
     display: none; }
+  .form__input {
+    position: relative;
+    width: 190px;
+    margin: auto; }
   .header__bottom form input, .header__bottom form select {
     margin-bottom: 15px;
     width: 190px;
@@ -814,17 +836,44 @@ form {
     position: relative; }
   .header__bottom .bout img {
     bottom: 43%;
-    right: 11%; }
+    right: 7%; }
   .header__bottom .departure img {
     bottom: 43%;
-    right: 11%; }
+    right: 7%; }
   .header__bottom .form svg {
     bottom: 43%;
-    right: 11%;
+    right: 7%;
     width: 21px;
     height: 22px; }
   .submit {
-    border: 1px solid #fff; }
+    border: 1px solid #4caf50; }
+  .popup_form {
+    width: 190px; }
+    .popup_form .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto; }
+    .popup_form form input, .popup_form form select {
+      margin-bottom: 15px;
+      width: 190px;
+      height: 47px;
+      position: relative;
+      font-size: 1.4rem; }
+    .popup_form .bout img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%; }
+    .popup_form .departure img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%; }
+    .popup_form .form svg {
+      bottom: 43%;
+      right: 7%;
+      width: 21px;
+      height: 22px; }
   .sl {
     height: auto;
     overflow: visible; }
@@ -847,11 +896,31 @@ form {
     width: 7px;
     height: 7px; } }
 
+/*@media screen and (max-width: 568px) and (min-width: 320px){
+  .popup_form {
+    width: 190px;
+    .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto;
+    }
+    form input, form select {
+      margin-bottom: 15px;
+      padding: 10px;
+      width: 190px;
+      height: 35px;
+      position: relative;
+      font-size: 1.4rem;
+    }
+  }
+}*/
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
     max-width: 710px; }
+  .header__wrap_group {
+    width: 80%; }
   .button-reserve {
-    display: none; }
+    margin-right: 20%; }
   .header__title {
     top: 100px;
     width: 182px; }
@@ -869,8 +938,7 @@ form {
     background-color: transparent;
     height: auto;
     top: 20%;
-    opacity: 1;
-    z-index: 1; }
+    opacity: 1; }
   .header__bottom_change {
     margin-top: 15%; }
   .book__room {
@@ -880,7 +948,6 @@ form {
     -ms-flex-align: end;
     align-items: flex-end; }
   .form {
-    width: 67%;
     max-width: 330px; }
   .form__title h3 {
     display: none; }
@@ -904,7 +971,34 @@ form {
     width: 21px;
     height: 22px; }
   .submit {
-    border: 1px solid #fff; }
+    border: 1px solid #4caf50; }
+  .popup_form {
+    width: 190px; }
+    .popup_form .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto; }
+    .popup_form form input, .popup_form form select {
+      margin-bottom: 10px;
+      width: 190px;
+      height: 47px;
+      position: relative;
+      font-size: 1.4rem; }
+    .popup_form .bout img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%; }
+    .popup_form .departure img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%; }
+    .popup_form .form svg {
+      bottom: 43%;
+      right: 7%;
+      width: 21px;
+      height: 22px; }
   .sl {
     height: auto;
     overflow: visible;
@@ -930,8 +1024,10 @@ form {
     height: 7px; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .header__wrap_group {
+    width: 80%; }
   .button-reserve {
-    display: none; }
+    margin-right: 20%; }
   .header__title {
     top: 100px;
     width: 182px; }
@@ -947,8 +1043,7 @@ form {
     background-color: transparent;
     height: auto;
     top: 20%;
-    opacity: 1;
-    z-index: 1; }
+    opacity: 1; }
   .header__bottom_change {
     margin-top: 15%; }
   .book__room {
@@ -958,7 +1053,6 @@ form {
     -ms-flex-align: end;
     align-items: flex-end; }
   .form {
-    width: 67%;
     max-width: 330px; }
   .form__title h3 {
     display: none; }
@@ -982,7 +1076,7 @@ form {
     width: 21px;
     height: 22px; }
   .submit {
-    border: 1px solid #fff; }
+    border: 1px solid #4caf50; }
   .sl {
     height: auto;
     overflow: visible;
@@ -1990,7 +2084,7 @@ li.nav-item:hover .advantages__svg {
   .reserve__link {
     text-align: center;
     padding: 17px 20px;
-    margin: 0 15px; }
+    margin: 0; }
   .header__title h1 {
     font-size: 3.8rem; }
   .header__title p {
@@ -2187,7 +2281,9 @@ li.nav-item:hover .advantages__svg {
   .rooms .column {
     max-width: 31%; }
   .rooms {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .content__top .header__title {
+    left: 0; } }
 
 /*
 ================================================================================
@@ -2900,11 +2996,33 @@ li.nav-item:hover .advantages__svg {
   .contacts__addres .contact {
     width: 100%; }
 
+.contact__link {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  padding: 40px 0 85px 0; }
+
+.contact__link a {
+  display: block;
+  width: 150px;
+  background-color: #4caf50;
+  padding: 15px 40px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #fff;
+  overflow: hidden; }
+  .contact__link a:hover {
+    background-color: #449c44; }
+
 @media screen and (min-width: 320px) and (max-width: 479px) {
+  .contact__link {
+    display: block; }
   .contacts__addres {
     display: none; } }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .contact__link {
+    display: block; }
   .contacts__addres {
     display: none; } }
 
