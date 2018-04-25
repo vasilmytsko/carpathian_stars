@@ -486,7 +486,8 @@ input[type="button"] {
 
 .header__bottom_change {
   position: relative;
-  margin-top: 84px; }
+  padding-top: 84px;
+  height: 290px; }
 
 .hide {
   opacity: 0;
@@ -754,7 +755,7 @@ form {
     top: 7%;
   }*/
   .menu {
-    max-height: 340px;
+    max-height: 220px;
     overflow-y: scroll;
     display: none;
     width: 100%;
@@ -797,7 +798,7 @@ form {
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .button-reserve {
-    margin-right: 20%; }
+    margin-right: 13%; }
   .reserve__link {
     padding: 15px 10px;
     font-size: 1rem; }
@@ -940,7 +941,7 @@ form {
     top: 20%;
     opacity: 1; }
   .header__bottom_change {
-    margin-top: 15%; }
+    padding-top: 15%; }
   .book__room {
     height: 100%;
     -webkit-box-align: end;
@@ -1077,6 +1078,33 @@ form {
     height: 22px; }
   .submit {
     border: 1px solid #4caf50; }
+  .popup_form {
+    width: 190px; }
+    .popup_form .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto; }
+    .popup_form form input, .popup_form form select {
+      margin-bottom: 10px;
+      width: 190px;
+      height: 47px;
+      position: relative;
+      font-size: 1.4rem; }
+    .popup_form .bout img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%; }
+    .popup_form .departure img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%; }
+    .popup_form .form svg {
+      bottom: 43%;
+      right: 7%;
+      width: 21px;
+      height: 22px; }
   .sl {
     height: auto;
     overflow: visible;
@@ -1114,8 +1142,7 @@ form {
     font-size: 1.6rem; }
   .header__bottom {
     height: auto;
-    bottom: 0%;
-    padding: 0; }
+    bottom: 0%; }
   form input, form select {
     margin-bottom: 20px; }
   .bout img, .departure img {
@@ -2821,7 +2848,7 @@ li.nav-item:hover .advantages__svg {
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .sanatorium__services {
-    margin-left: 45px; } }
+    margin-left: 0; } }
 
 /*
 ================================================================================
@@ -3139,22 +3166,26 @@ li.nav-item:hover .advantages__svg {
   .oops__error {
     height: auto; }
   .error {
-    margin-top: 25%; }
+    padding-top: 25%; }
   .error__title {
-    top: 15%; }
+    top: 30%; }
   .error__title h1 {
     font-size: 5rem; }
-  .error__content p {
-    font-size: 1.4rem; } }
+  .error__content {
+    top: 70%; }
+    .error__content p {
+      font-size: 1.6rem; } }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .oops__error {
     height: auto; }
   .error {
-    margin-top: 15%; }
+    padding-top: 15%; }
   .error__title {
-    top: 20%; }
+    top: 30%; }
   .error__title h1 {
     font-size: 7rem; }
-  .error__content p {
-    font-size: 1.6rem; } }
+  .error__content {
+    top: 70%; }
+    .error__content p {
+      font-size: 1.6rem; } }

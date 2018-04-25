@@ -92,16 +92,19 @@
     height: auto;
   }
   .error{
-    margin-top: 25%;
+    padding-top: 25%;
   }
   .error__title{
-    top:15%;
+    top:30%;
   }
   .error__title h1{
     font-size: 5rem;
   }
-  .error__content p{
-    font-size: 1.4rem;
+  .error__content {
+    top:70%;
+    p {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -110,16 +113,19 @@
     height: auto;
   }
   .error{
-    margin-top: 15%;
+    padding-top: 15%;
   }
   .error__title{
-    top:20%;
+    top:30%;
   }
   .error__title h1{
     font-size: 7rem;
   }
-  .error__content p{
-    font-size: 1.6rem;
+  .error__content {
+    top:70%;
+    p {
+      font-size: 1.6rem;
+    }
   }
 }
 

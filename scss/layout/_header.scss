@@ -306,7 +306,8 @@ input[type="button"] {
 
 .header__bottom_change {
   position: relative;
-  margin-top: 84px;
+  padding-top: 84px;
+  height: 290px;
 }
 
 .hide {
@@ -561,7 +562,7 @@ form {
   }*/
   .menu {
     //margin-top: 80px;
-    max-height: 340px;
+    max-height: 220px;
     overflow-y: scroll;
     display: none;
     width: 100%;
@@ -619,7 +620,7 @@ form {
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .button-reserve {
-    margin-right: 20%;
+    margin-right: 13%;
   }
   .reserve__link {
     padding: 15px 10px;
@@ -810,7 +811,7 @@ form {
   }
 
   .header__bottom_change {
-    margin-top: 15%;
+    padding-top: 15%;
   }
   .book__room {
     height: 100%;
@@ -985,7 +986,40 @@ form {
   .submit {
     border: 1px solid $bg-color3;
   }
+  .popup_form{
+    width: 190px;
+    .form_control {
+      position: relative;
+      width: 190px;
+      margin: auto;
+    }
+    form input, form select {
+      margin-bottom: 10px;
+      width: 190px;
+      height: 47px;
+      position: relative;
+      font-size: 1.4rem;
+    }
 
+    .bout img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%;
+    }
+    .departure img {
+      width: 21px;
+      height: 22px;
+      bottom: 43%;
+      right: 7%;
+    }
+    .form svg {
+      bottom: 43%;
+      right: 7%;
+      width: 21px;
+      height: 22px;
+    }
+  }
   .sl {
     height: auto;
     overflow: visible;
@@ -1040,7 +1074,7 @@ form {
   .header__bottom {
     height: auto;
     bottom: 0%;
-    padding: 0;
+    //padding: 0;
   }
   form input, form select {
     margin-bottom: 20px;
