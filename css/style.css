@@ -1404,28 +1404,6 @@ body {
   width: 100%;
   height: auto; }
 
-.body__overlay {
-  background: url("../img/body.png") no-repeat;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-animation: 20s animatedBackground infinite linear alternate;
-  animation: 20s animatedBackground infinite linear alternate; }
-
-@-webkit-keyframes animatedBackground {
-  0% {
-    background-position: 50% 0%; }
-  100% {
-    background-position: 50% 100%; } }
-
-@keyframes animatedBackground {
-  0% {
-    background-position: 50% 0%; }
-  100% {
-    background-position: 50% 100%; } }
-
 .wrapper {
   min-height: 100%;
   position: relative;
@@ -1443,6 +1421,124 @@ body {
 img {
   width: 100%;
   height: auto; }
+
+/*overlay*/
+.overlay__plus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+  .overlay__plus img {
+    position: absolute;
+    width: 10px; }
+
+.line-1,
+.line-2,
+.line-3 {
+  position: absolute;
+  background-color: rgba(189, 189, 189, 0.36);
+  width: 1px;
+  height: 100%; }
+
+.line-1 {
+  left: 21.5%; }
+
+.line-2 {
+  left: 50%; }
+
+.line-3 {
+  right: 23%; }
+
+.plus_left_1,
+.plus_right_1 {
+  top: 15%;
+  left: 0%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: 10s animatedPlusDown infinite linear alternate;
+  animation: 10s animatedPlusDown infinite linear alternate; }
+
+.plus_left_2,
+.plus_right_2 {
+  top: 25%;
+  -webkit-animation: 10s animatedPlusDown2 infinite linear alternate;
+  animation: 10s animatedPlusDown2 infinite linear alternate; }
+
+.plus_center_1 {
+  bottom: 15%;
+  -webkit-animation: 10s animatedPlusUp infinite linear alternate;
+  animation: 10s animatedPlusUp infinite linear alternate; }
+
+.plus_center_2 {
+  bottom: 25%;
+  -webkit-animation: 10s animatedPlusUp2 infinite linear alternate;
+  animation: 10s animatedPlusUp2 infinite linear alternate; }
+
+@-webkit-keyframes animatedPlusDown {
+  0% {
+    -webkit-transform: translateY(15%);
+    transform: translateY(15%); }
+  100% {
+    -webkit-transform: translateY(900px);
+    transform: translateY(900px); } }
+
+@keyframes animatedPlusDown {
+  0% {
+    -webkit-transform: translateY(15%);
+    transform: translateY(15%); }
+  100% {
+    -webkit-transform: translateY(900px);
+    transform: translateY(900px); } }
+
+@-webkit-keyframes animatedPlusDown2 {
+  0% {
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%); }
+  100% {
+    -webkit-transform: translateY(1100px);
+    transform: translateY(1100px); } }
+
+@keyframes animatedPlusDown2 {
+  0% {
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%); }
+  100% {
+    -webkit-transform: translateY(1100px);
+    transform: translateY(1100px); } }
+
+@-webkit-keyframes animatedPlusUp {
+  0% {
+    -webkit-transform: translateY(15%);
+    transform: translateY(15%); }
+  100% {
+    -webkit-transform: translateY(-900px);
+    transform: translateY(-900px); } }
+
+@keyframes animatedPlusUp {
+  0% {
+    -webkit-transform: translateY(15%);
+    transform: translateY(15%); }
+  100% {
+    -webkit-transform: translateY(-900px);
+    transform: translateY(-900px); } }
+
+@-webkit-keyframes animatedPlusUp2 {
+  0% {
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%); }
+  100% {
+    -webkit-transform: translateY(-1100px);
+    transform: translateY(-1100px); } }
+
+@keyframes animatedPlusUp2 {
+  0% {
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%); }
+  100% {
+    -webkit-transform: translateY(-1100px);
+    transform: translateY(-1100px); } }
 
 /*preloader*/
 .preloader {
@@ -1478,6 +1574,16 @@ img {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+  .preloader .load__txt {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #424242;
+    -webkit-transform: translate(-50%, 73%);
+    -ms-transform: translate(-50%, 73%);
+    transform: translate(-50%, 73%);
+    font-size: 3rem; }
   .preloader .loaderr text {
     -webkit-animation: 2s move infinite linear;
     animation: 2s move infinite linear; }

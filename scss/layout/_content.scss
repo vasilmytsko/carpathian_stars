@@ -9,25 +9,6 @@ body {
   height: auto;
 }
 
-.body__overlay {
-  background: url("../img/body.png") no-repeat;
-  //background-position: 50% 0%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  animation: 20s animatedBackground infinite linear alternate;
-}
-
-@keyframes animatedBackground {
-  0% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 50% 100%;
-  }
-}
 
 .wrapper {
   min-height: 100%;
@@ -50,7 +31,92 @@ img {
   width: 100%;
   height: auto;
 }
+/*overlay*/
+.overlay__plus{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  img{
+    position: absolute;
+    width: 10px;
+   // transform: translateX(-50%);
+  }
+}
+.line-1,
+.line-2,
+.line-3{
+  position: absolute;
+  background-color: rgba(189,189,189, 0.36);
+  width: 1px;
+  height: 100%;
+}
 
+.line-1{
+  left: 21.5%;
+}
+
+.line-2{
+  left: 50%;
+}
+.line-3{
+  right: 23%;
+}
+.plus_left_1,
+.plus_right_1{
+  top: 15%;
+  left: 0%;
+  transform: translateX(-50%);
+  animation: 10s animatedPlusDown infinite linear alternate;
+
+}
+.plus_left_2,
+.plus_right_2{
+  top: 25%;
+  animation: 10s animatedPlusDown2 infinite linear alternate;
+}
+
+.plus_center_1{
+  bottom: 15%;
+  animation: 10s animatedPlusUp infinite linear alternate;
+}
+.plus_center_2{
+  bottom: 25%;
+  animation: 10s animatedPlusUp2 infinite linear alternate;
+}
+@keyframes animatedPlusDown {
+  0% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(900px);
+  }
+}
+@keyframes animatedPlusDown2 {
+  0% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(1100px);
+  }
+}
+@keyframes animatedPlusUp {
+  0% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-900px);
+  }
+}
+@keyframes animatedPlusUp2 {
+  0% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(-1100px);
+  }
+}
 /*preloader*/
 
 .preloader {
@@ -71,6 +137,15 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
 
+  }
+  .load__txt{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $title-color3;
+    transform: translate(-50%, 73%);
+    font-size: 3rem;
   }
   .loaderr text{
     animation: 2s move infinite linear;
