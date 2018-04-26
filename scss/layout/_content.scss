@@ -64,7 +64,18 @@ img {
   transition: 1s all;
   opacity: 1;
   visibility: visible;
-  .loader {
+  .loaderr svg {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .loaderr text{
+    animation: 2s move infinite linear;
+  }
+  /*.loader {
     width: 75px;
     height: 75px;
     border: 10px solid $bg-color4;
@@ -75,19 +86,28 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: 2s spin infinite linear;
-  }
+  }*/
   &.done {
     opacity: 0;
     visibility: hidden;
   }
 }
 
-@keyframes spin {
+/*@keyframes spin {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}*/
+
+@keyframes move {
+  0% {
+    fill: #424242;
+  }
+  100% {
+    fill: green;
   }
 }
 
@@ -373,7 +393,7 @@ li.nav-item:hover .advantages__svg {
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .about {
-    margin: 130px 0 30px 0;
+    margin: 160px 0 30px 0;
   }
   .about__content {
     padding-top: 60px;
@@ -395,7 +415,7 @@ li.nav-item:hover .advantages__svg {
   }
   .about__img {
     left: -15px;
-    top: -125px;
+    top: -110px;
   }
   .about__image {
     display: none;
@@ -467,7 +487,7 @@ li.nav-item:hover .advantages__svg {
 @media screen and (min-width: 480px) and (max-width: 575px) {
 
   .about {
-    margin: 130px 0 30px 0;
+    margin: 150px 0 30px 0;
   }
   .about__content {
     padding-top: 60px;

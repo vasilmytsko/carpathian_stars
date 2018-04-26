@@ -44,6 +44,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .treatment .treatment__text{
+    padding: 10px 15px;
+    color: $text-color2;
+    font-size: 1.8rem;
+  }
 
 }
 

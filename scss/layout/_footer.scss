@@ -89,10 +89,14 @@
   .footer {
     background: none;
   }
+  .contact__center{
+    display: flex;
+    justify-content: center;
+  }
   .contact{
     width: 100%;
-    text-align: center;
-    padding: 50px 0;
+    padding: 50px 0 50px 10px;
+    margin-bottom: 40px;
   }
   .btn__begin {
     max-width: 300px;
@@ -112,14 +116,19 @@
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 575px){
+@media screen and (min-width: 480px) and (max-width: 767px){
   .footer {
     background: none;
   }
+  .content_center{
+    display: flex;
+    justify-content: center;
+  }
+
   .contact{
-    width: 100%;
-    text-align: center;
-    padding: 50px 0;
+    max-width: 250px;
+    padding: 50px 0 50px 20px;
+    margin-bottom: 40px;
   }
   .btn__begin {
     max-width: 300px;
@@ -136,43 +145,6 @@
     padding: 0;
     max-width: 330px;
     margin: auto;
-  }
-}
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  .footer {
-    height: auto;
-  }
-  .footer__box{
-    margin: 60px 0 0 0;
-    padding-bottom: 60px;
-    align-items: flex-start;
-  }
-  .contact{
-    width: 100%;
-    text-align: center;
-    padding: 50px 0;
-    font-size: 1.2rem;
-  }
-  .btn__begin {
-    max-width: 300px;
-    margin: auto;
-    margin-top: 65px;
-    button {
-      width: 100%;
-      font-size: 1.2rem;
-      line-height: 70px;
-      height: 70px;
-      margin: 0 auto;
-    }
-  }
-  .footer__menu{
-    padding: 0;
-    max-width: 330px;
-    margin: auto;
-    padding-top: 45px;
-    a{
-      font-size: 1.2rem;
-    }
   }
 }
 
@@ -187,8 +159,7 @@
   }
   .contact{
     width: 100%;
-    text-align: center;
-    padding: 50px 0;
+    padding: 50px 0 50px 20px;
     font-size: 1.4rem;
   }
   .btn__begin {
@@ -207,10 +178,46 @@
     padding: 0;
     max-width: 330px;
     margin: auto;
-    padding-top: 45px;
+    padding: 45px 10px 0 10px;
     a{
       font-size: 1.4rem;
     }
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  .footer {
+    height: auto;
+  }
+  .footer__box{
+    margin: 60px 0 0 0;
+    padding-bottom: 60px;
+    align-items: flex-start;
+  }
+  .contact{
+    width: 100%;
+    padding: 50px;
+    padding-right: 0;
+    font-size: 1.4rem;
+  }
+  .btn__begin {
+    max-width: 300px;
+    margin: auto;
+    margin-top: 65px;
+    button {
+      width: 100%;
+      font-size: 1.4rem;
+      line-height: 70px;
+      height: 70px;
+      margin: 0 auto;
+    }
+  }
+  .footer__menu{
+    max-width: 330px;
+    margin: auto;
+    padding: 45px 30px 0 30px;
+    a{
+      font-size: 1.4rem;
+    }
+  }
+}

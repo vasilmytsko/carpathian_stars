@@ -362,15 +362,16 @@ input[type="button"] {
 }
 
 .popup_form {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  right: 0;
-  width: 340px;
-  margin: auto;
-  z-index: 99999;
-}
+   display: none;
+   position: absolute;
+   left: 0;
+   top: 0px;
+   right: 0;
+   width: 340px;
+   margin: auto;
+   z-index: 99999;
+ }
+
 
 .bg_popup {
   position: fixed;
@@ -475,7 +476,8 @@ form {
 }
 
 .sl {
-  height: 100vh;
+  max-height: 768px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -700,9 +702,9 @@ form {
       margin: auto;
     }
     form input, form select {
-      margin-bottom: 15px;
+      margin-bottom: 13px;
       width: 190px;
-      height: 47px;
+      height: 45px;
       position: relative;
       font-size: 1.4rem;
     }
